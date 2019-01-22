@@ -8,6 +8,6 @@ entries:
     digest: 29cab7955f5025288fc35724bfdf5c39f0e531049542e7949c7cdaa72c290f5b
     name: mortgage
     urls:
-    - https://raw.githubusercontent.com/kyo11103/mortgage/master/mortgage-0.5.0.tgz
-    version: 0.5.0
+    - https://raw.githubusercontent.com/kyo11103/mortgage/master/mortgage-0.6.0.tgz
+    version: 0.6.0
 generated: 2018-11-28T09:47:57.772661368-08:00
