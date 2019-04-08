@@ -4,10 +4,10 @@ entries:
   - apiVersion: v1
     appVersion: "1.0"
     created: 2018-11-28T09:47:57.77414926-08:00
-    description: A ficticious mortgage app
+    description: A sample mortgage app
     digest: 29cab7955f5025288fc35724bfdf5c39f0e531049542e7949c7cdaa72c290f5b
     name: mortgage
     urls:
-    - https://raw.githubusercontent.com/kyo11103/mortgage/master/mortgage-0.8.0.tgz
-    version: 0.8.0
+    - https://raw.githubusercontent.com/kyo11103/mortgage/master/mortgage-0.9.0.tgz
+    version: 0.9.0
 generated: 2018-11-28T09:47:57.772661368-08:00
