@@ -3,16 +3,16 @@ entries:
   mortgage:
   - apiVersion: v1
     appVersion: "1.0"
-    created: 2019-10-03T16:03:19.210923-04:00
+    created: 2019-10-03T17:08:24.917391-04:00
     description: A sample mortgage app
-    digest: 8ea0e551549b243e7f1c0b9c9110306ef4486081f475b79e3936be2d59fd23c4
+    digest: 32469dc8dcb02d31be3d4ffcb308074a381bfbdc57030dda8544c731fdaa8197
     name: mortgage
     urls:
     - https://raw.githubusercontent.com/kyo11103/mortgage/master/mortgage-1.0.3.tgz
     version: 1.0.3
   - apiVersion: v1
     appVersion: "1.0"
-    created: 2019-10-03T16:03:19.210046-04:00
+    created: 2019-10-03T17:08:24.917122-04:00
     description: A sample mortgage app
     digest: b6a97918b669d5c74062cff5eee5f618d8d16e1ae8df4e862658367133fac64c
     name: mortgage
@@ -21,7 +21,7 @@ entries:
     version: 1.0.2
   - apiVersion: v1
     appVersion: "1.0"
-    created: 2019-10-03T16:03:19.209099-04:00
+    created: 2019-10-03T17:08:24.916226-04:00
     description: A sample mortgage app
     digest: 7e8c9dc9edaa260b808d4dc114d3ca4a2139ddfc337f5278f9aafc7be6c0b773
     name: mortgage
@@ -30,7 +30,7 @@ entries:
     version: 1.0.1
   - apiVersion: v1
     appVersion: "1.0"
-    created: 2019-10-03T16:03:19.208021-04:00
+    created: 2019-10-03T17:08:24.915349-04:00
     description: A sample mortgage app
     digest: cd04f871a0969327e8b18859f5ac775ca2052f00d6024fd2b480bd589a2196fd
     name: mortgage
@@ -39,7 +39,7 @@ entries:
     version: 1.0.0
   - apiVersion: v1
     appVersion: "1.0"
-    created: 2019-10-03T16:03:19.207588-04:00
+    created: 2019-10-03T17:08:24.91484-04:00
     description: A sample mortgage app
     digest: ef4e97e5ff64c3a98b8a6dde2f2bfa22da94241b30d948bbb008abb352d89885
     name: mortgage
@@ -48,7 +48,7 @@ entries:
     version: 0.9.0
   - apiVersion: v1
     appVersion: "1.0"
-    created: 2019-10-03T16:03:19.207099-04:00
+    created: 2019-10-03T17:08:24.914293-04:00
     description: A ficticious mortgage app
     digest: 85c990c53dbf6dcb947bc5938a17b8e509737b9ea7fdbaacb2bbf665bb126986
     name: mortgage
@@ -57,7 +57,7 @@ entries:
     version: 0.8.0
   - apiVersion: v1
     appVersion: "1.0"
-    created: 2019-10-03T16:03:19.206591-04:00
+    created: 2019-10-03T17:08:24.913842-04:00
     description: A ficticious mortgage app
     digest: b32144b897ffa427087e9187cef5025f990d81d271b99495b28753a5054e2f00
     name: mortgage
@@ -66,7 +66,7 @@ entries:
     version: 0.7.0
   - apiVersion: v1
     appVersion: "1.0"
-    created: 2019-10-03T16:03:19.206117-04:00
+    created: 2019-10-03T17:08:24.913407-04:00
     description: A ficticious mortgage app
     digest: ef03a52feb4d6567dea3187df846d1beecbd73308c8b3d56d7d8afa9df9bfd50
     name: mortgage
@@ -75,7 +75,7 @@ entries:
     version: 0.6.0
   - apiVersion: v1
     appVersion: "1.0"
-    created: 2019-10-03T16:03:19.205611-04:00
+    created: 2019-10-03T17:08:24.912809-04:00
     description: A ficticious mortgage app
     digest: 7567b6fffc917e3b0de4899edc87e8b854539574c6e31d619abab25a536089ea
     name: mortgage
@@ -84,7 +84,7 @@ entries:
     version: 0.5.0
   - apiVersion: v1
     appVersion: "1.0"
-    created: 2019-10-03T16:03:19.205108-04:00
+    created: 2019-10-03T17:08:24.912292-04:00
     description: A ficticious mortgage app
     digest: 248b6c7a6941877e88ac5a678cfd334692b3670f691af47ec2ebc19a4031c72c
     name: mortgage
@@ -93,7 +93,7 @@ entries:
     version: 0.4.0
   - apiVersion: v1
     appVersion: "1.0"
-    created: 2019-10-03T16:03:19.204641-04:00
+    created: 2019-10-03T17:08:24.911792-04:00
     description: A ficticious mortgage app
     digest: f8a557c4e50a02ff4ace79ad7bd72126f45f1216f93319e50fd4f05e63602302
     name: mortgage
@@ -102,7 +102,7 @@ entries:
     version: 0.3.0
   - apiVersion: v1
     appVersion: "1.0"
-    created: 2019-10-03T16:03:19.204176-04:00
+    created: 2019-10-03T17:08:24.911321-04:00
     description: A ficticious mortgage app
     digest: e75775843024b52ce3c23b8b2acf0cf8ee224ab4f2db3f435598c41edf3e87b0
     name: mortgage
@@ -111,7 +111,7 @@ entries:
     version: 0.2.0
   - apiVersion: v1
     appVersion: "1.0"
-    created: 2019-10-03T16:03:19.203379-04:00
+    created: 2019-10-03T17:08:24.910428-04:00
     description: A ficticious mortgage app
     digest: 5ea5715d600dffd406e36e340ed896eda8fe0f6d87381c3c9aea9fc49307aad1
     name: mortgage
@@ -121,11 +121,11 @@ entries:
   mortgage-channel:
   - apiVersion: v1
     appVersion: "1.0"
-    created: 2019-10-03T16:03:19.211136-04:00
+    created: 2019-10-03T17:08:24.917588-04:00
     description: A sample mortgage channel
-    digest: 5ed1f9a0c58564f1353b5d8bc33f9f97f98aebef17ec228764e89c9cefd47df0
+    digest: be7acc104eae8fff0bd64b102e73abc95cf2fdfafbfb3750081f469edc0e2158
     name: mortgage-channel
     urls:
     - https://raw.githubusercontent.com/kyo11103/mortgage/master/mortgage-channel-1.0.0.tgz
     version: 1.0.0
-generated: 2019-10-03T16:03:19.201572-04:00
+generated: 2019-10-03T17:08:24.909274-04:00
