@@ -3,11 +3,129 @@ entries:
   mortgage:
   - apiVersion: v1
     appVersion: "1.0"
-    created: 2018-11-28T09:47:57.77414926-08:00
+    created: 2019-10-03T11:53:54.607044-04:00
     description: A sample mortgage app
-    digest: 29cab7955f5025288fc35724bfdf5c39f0e531049542e7949c7cdaa72c290f5b
+    digest: 7c63c6d61f8409c34a2bde59c12c9efd5d9ec96a450a7669063385e146bc61f1
+    name: mortgage
+    urls:
+    - https://raw.githubusercontent.com/kyo11103/mortgage/master/mortgage-1.0.3.tgz
+    version: 1.0.3
+  - apiVersion: v1
+    appVersion: "1.0"
+    created: 2019-10-03T11:53:54.606721-04:00
+    description: A sample mortgage app
+    digest: b6a97918b669d5c74062cff5eee5f618d8d16e1ae8df4e862658367133fac64c
     name: mortgage
     urls:
     - https://raw.githubusercontent.com/kyo11103/mortgage/master/mortgage-1.0.2.tgz
     version: 1.0.2
-generated: 2018-11-28T09:47:57.772661368-08:00
+  - apiVersion: v1
+    appVersion: "1.0"
+    created: 2019-10-03T11:53:54.605356-04:00
+    description: A sample mortgage app
+    digest: 7e8c9dc9edaa260b808d4dc114d3ca4a2139ddfc337f5278f9aafc7be6c0b773
+    name: mortgage
+    urls:
+    - https://raw.githubusercontent.com/kyo11103/mortgage/master/mortgage-1.0.1.tgz
+    version: 1.0.1
+  - apiVersion: v1
+    appVersion: "1.0"
+    created: 2019-10-03T11:53:54.605132-04:00
+    description: A sample mortgage app
+    digest: cd04f871a0969327e8b18859f5ac775ca2052f00d6024fd2b480bd589a2196fd
+    name: mortgage
+    urls:
+    - https://raw.githubusercontent.com/kyo11103/mortgage/master/mortgage-1.0.0.tgz
+    version: 1.0.0
+  - apiVersion: v1
+    appVersion: "1.0"
+    created: 2019-10-03T11:53:54.604917-04:00
+    description: A sample mortgage app
+    digest: ef4e97e5ff64c3a98b8a6dde2f2bfa22da94241b30d948bbb008abb352d89885
+    name: mortgage
+    urls:
+    - https://raw.githubusercontent.com/kyo11103/mortgage/master/mortgage-0.9.0.tgz
+    version: 0.9.0
+  - apiVersion: v1
+    appVersion: "1.0"
+    created: 2019-10-03T11:53:54.604694-04:00
+    description: A ficticious mortgage app
+    digest: 85c990c53dbf6dcb947bc5938a17b8e509737b9ea7fdbaacb2bbf665bb126986
+    name: mortgage
+    urls:
+    - https://raw.githubusercontent.com/kyo11103/mortgage/master/mortgage-0.8.0.tgz
+    version: 0.8.0
+  - apiVersion: v1
+    appVersion: "1.0"
+    created: 2019-10-03T11:53:54.604461-04:00
+    description: A ficticious mortgage app
+    digest: b32144b897ffa427087e9187cef5025f990d81d271b99495b28753a5054e2f00
+    name: mortgage
+    urls:
+    - https://raw.githubusercontent.com/kyo11103/mortgage/master/mortgage-0.7.0.tgz
+    version: 0.7.0
+  - apiVersion: v1
+    appVersion: "1.0"
+    created: 2019-10-03T11:53:54.603733-04:00
+    description: A ficticious mortgage app
+    digest: ef03a52feb4d6567dea3187df846d1beecbd73308c8b3d56d7d8afa9df9bfd50
+    name: mortgage
+    urls:
+    - https://raw.githubusercontent.com/kyo11103/mortgage/master/mortgage-0.6.0.tgz
+    version: 0.6.0
+  - apiVersion: v1
+    appVersion: "1.0"
+    created: 2019-10-03T11:53:54.60351-04:00
+    description: A ficticious mortgage app
+    digest: 7567b6fffc917e3b0de4899edc87e8b854539574c6e31d619abab25a536089ea
+    name: mortgage
+    urls:
+    - https://raw.githubusercontent.com/kyo11103/mortgage/master/mortgage-0.5.0.tgz
+    version: 0.5.0
+  - apiVersion: v1
+    appVersion: "1.0"
+    created: 2019-10-03T11:53:54.603302-04:00
+    description: A ficticious mortgage app
+    digest: 248b6c7a6941877e88ac5a678cfd334692b3670f691af47ec2ebc19a4031c72c
+    name: mortgage
+    urls:
+    - https://raw.githubusercontent.com/kyo11103/mortgage/master/mortgage-0.4.0.tgz
+    version: 0.4.0
+  - apiVersion: v1
+    appVersion: "1.0"
+    created: 2019-10-03T11:53:54.603094-04:00
+    description: A ficticious mortgage app
+    digest: f8a557c4e50a02ff4ace79ad7bd72126f45f1216f93319e50fd4f05e63602302
+    name: mortgage
+    urls:
+    - https://raw.githubusercontent.com/kyo11103/mortgage/master/mortgage-0.3.0.tgz
+    version: 0.3.0
+  - apiVersion: v1
+    appVersion: "1.0"
+    created: 2019-10-03T11:53:54.602868-04:00
+    description: A ficticious mortgage app
+    digest: e75775843024b52ce3c23b8b2acf0cf8ee224ab4f2db3f435598c41edf3e87b0
+    name: mortgage
+    urls:
+    - https://raw.githubusercontent.com/kyo11103/mortgage/master/mortgage-0.2.0.tgz
+    version: 0.2.0
+  - apiVersion: v1
+    appVersion: "1.0"
+    created: 2019-10-03T11:53:54.602556-04:00
+    description: A ficticious mortgage app
+    digest: 5ea5715d600dffd406e36e340ed896eda8fe0f6d87381c3c9aea9fc49307aad1
+    name: mortgage
+    urls:
+    - https://raw.githubusercontent.com/kyo11103/mortgage/master/mortgage-0.1.0.tgz
+    version: 0.1.0
+  mortgage-channel:
+  - apiVersion: v1
+    appVersion: "1.0"
+    created: 2019-10-03T11:53:54.607262-04:00
+    description: A sample mortgage channel
+    digest: a3a0510641d054ba598a841ff2a64cbf449d461ae92163b779b92c9cd22998f7
+    name: mortgage-channel
+    urls:
+    - https://raw.githubusercontent.com/kyo11103/mortgage/master/mortgage-channel-1.0.0.tgz
+    version: 1.0.0
+generated: 2019-10-03T11:53:54.601578-04:00
