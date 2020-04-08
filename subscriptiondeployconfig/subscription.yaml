@@ -4,7 +4,7 @@ metadata:
   name: mortgagedc-subscription
   namespace: default
   labels:
-    app: mortgage-app-mortgage
+    app: mortgagedc
   annotations:
     apps.open-cluster-management.io/github-path: mortgagedc
     apps.open-cluster-management.io/github-branch: master

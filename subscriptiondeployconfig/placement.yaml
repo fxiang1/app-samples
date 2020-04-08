@@ -3,7 +3,7 @@ kind: PlacementRule
 metadata:
   name: mortgagedc-placement
   labels:
-    app: mortgage-app-mortgage
+    app: mortgagedc
 spec:
   clusterReplicas: 1
   clusterLabels:
