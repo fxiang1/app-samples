@@ -1,0 +1,42 @@
+apiVersion: v1
+kind: DeploymentConfig
+metadata:
+  name: mortgagedc-deploy
+  labels:
+    app: mortgagedc-mortgage
+spec:
+  selector:
+    matchLabels:
+      app: mortgagedc-mortgage
+  replicas: 1
+  stratregy:
+    type: Recreate
+  template:
+    metadata:
+      labels:
+        deploymentConfig: mortgagedc-mortgage
+        app: mortgagedc-mortgage
+    spec:
+      containers:
+        - name: mortgagedc-mortgage
+          image: "fxiang/mortgage:0.4.0"
+          imagePullPolicy: Always
+          ports:
+            - containerPort: 9080
+          resources:
+            limits:
+              cpu: 200m
+              memory: 256Mi
+            request:
+              cpu: 200m
+              memory: 256Mi
+triggers:
+  - type: ImageChange
+    imageChangeParams:
+      automatic: true
+      containerName:
+        - mortgagedc-mortgage
+      from:
+        kind: ImageStreamTag
+        name: fxiang/mortgage:latest
+    type: ConfigChange
