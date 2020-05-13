@@ -1,0 +1,28 @@
+apiVersion: apps/v1
+kind: DaemonSet
+metadata:
+  name: mortgageds-deploy
+  namespace: default
+  labels:
+    app: mortgageds-mortgage
+spec:
+  replicas: 1
+  selector:
+    app: mortgageds-mortgage
+  template:
+    metadata:
+      labels:
+        app: mortgageds-mortgage
+    spec:
+      containers:
+        - name: mortgageds-mortgage
+          image: 'fxiang/mortgage:0.4.0'
+          ports:
+            - containerPort: 9080
+              protocol: TCP
+          resources:
+            limits:
+              cpu: 200m
+              memory: 256Mi
+          imagePullPolicy: Always
+      terminationGracePeriodSeconds: 30
