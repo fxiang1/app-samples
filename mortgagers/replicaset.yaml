@@ -1,0 +1,29 @@
+apiVersion: apps/v1
+kind: ReplicaSet
+metadata:
+  name: mortgagers-deploy
+  namespace: default
+  labels:
+    app: mortgagers-mortgage
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: mortgagers-mortgage
+  template:
+    metadata:
+      labels:
+        app: mortgagers-mortgage
+    spec:
+      containers:
+        - name: mortgagers-mortgage
+          image: 'fxiang/mortgage:0.4.0'
+          ports:
+            - containerPort: 9080
+              protocol: TCP
+          resources:
+            limits:
+              cpu: 200m
+              memory: 256Mi
+          imagePullPolicy: Always
+      terminationGracePeriodSeconds: 30
