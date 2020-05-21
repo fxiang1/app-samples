@@ -15,3 +15,4 @@ spec:
       name: mortgagers-placement
       kind: PlacementRule
       group: apps.open-cluster-management.io
+
