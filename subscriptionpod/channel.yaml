@@ -1,0 +1,9 @@
+apiVersion: apps.open-cluster-management.io/v1
+kind: Channel
+metadata:
+  name: mortgagepod-channel
+  namespace: mortgagepod-ch
+spec:
+  type: GitHub
+  pathname: https://github.com/fxiang1/mortgage.git
+

@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: mortgagepod-svc
+  namespace: default
+  labels:
+    app: mortgagepod-mortgage
+spec:
+  type: NodePort
+  ports:
+    - port: 9080
+      targetPort: 9080
+      protocol: TCP
+  selector:
+    app: mortgagepod-mortgage
