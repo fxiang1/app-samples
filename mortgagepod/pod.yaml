@@ -5,16 +5,16 @@ metadata:
   namespace: default
   labels:
     app: mortgagepod-mortgage
-  spec:
-    containers:
-      - name: mortgagepod-mortgage
-        image: 'fxiang/mortgage:0.4.0'
-        ports:
-          - containerPort: 9080
-            protocol: TCP
-        resources:
-          limits:
-            cpu: 200m
-            memory: 256Mi
-        imagePullPolicy: Always
+spec:
+  containers:
+    - name: mortgagepod-mortgage
+      image: 'fxiang/mortgage:0.4.0'
+      ports:
+        - containerPort: 9080
+          protocol: TCP
+      resources:
+        limits:
+          cpu: 200m
+          memory: 256Mi
+      imagePullPolicy: Always
 
