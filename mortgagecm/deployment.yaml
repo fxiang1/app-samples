@@ -1,0 +1,35 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: mortgagecm-deploy
+  labels:
+    app: mortgagecm-mortgage
+spec:
+  selector:
+    matchLabels:
+      app: mortgagecm-mortgage
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: mortgagecm-mortgage
+    spec:
+      containers:
+      - name: mortgagecm-mortgage
+        env:
+          - name: ENV_CONFIG
+            valueFrom:
+              configMapKeyRef:
+                name: env-config
+                key: log_level
+        image: "fxiang/mortgage:0.4.0"
+        imagePullPolicy: Always
+        ports:
+          - containerPort: 9080
+        resources:
+          limits:
+            cpu: 200m
+            memory: 256Mi
+          request:
+            cpu: 200m
+            memory: 256Mi
