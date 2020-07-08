@@ -1,0 +1,18 @@
+apiVersion: app.k8s.io/v1beta1
+kind: Application
+metadata:
+  labels:
+    app: gbapp
+    release: app01
+  name: gbapp-app01
+  namespace: project-workspace
+spec:
+  componentKinds:
+    - group: apps.open-cluster-management.io
+      kind: Subscription
+  selector:
+    matchExpressions:
+      - key: release
+        operator: In
+        values:
+          - app01

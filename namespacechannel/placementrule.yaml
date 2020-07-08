@@ -1,0 +1,16 @@
+apiVersion: apps.open-cluster-management.io/v1
+kind: PlacementRule
+metadata:
+  labels:
+    app: gbapp
+    release: app01
+  name: gbapp-app01
+  namespace: project-workspace
+spec:
+  clusterConditions:
+    - status: 'True'
+      type: ManagedClusterConditionAvailable
+  clusterReplicas: 2
+  clusterSelector:
+    matchLabels:
+      environment: Dev

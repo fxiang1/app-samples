@@ -1,0 +1,11 @@
+apiVersion: apps.open-cluster-management.io/v1
+kind: Channel
+metadata:
+  name: gbchn
+  namespace: gbchn
+  labels:
+    app: gbchn
+    release: gbchn
+spec:
+  pathname: gbchn
+  type: Namespace

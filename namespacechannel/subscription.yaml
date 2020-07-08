@@ -1,0 +1,19 @@
+apiVersion: apps.open-cluster-management.io/v1
+kind: Subscription
+metadata:
+  labels:
+    app: gbapp
+    release: app01
+  name: gbapp-app01-guestbook
+  namespace: project-workspace
+spec:
+  channel: gbchn/gbchn
+  overrides:
+    - clusterName: /
+      clusterOverrides:
+        - path: metadata.namespace
+          value: default
+  placement:
+    placementRef:
+      kind: PlacementRule
+      name: gbapp-app01

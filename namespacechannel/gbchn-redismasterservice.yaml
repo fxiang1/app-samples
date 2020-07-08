@@ -1,0 +1,26 @@
+apiVersion: apps.open-cluster-management.io/v1
+kind: Deployable
+metadata:
+  labels:
+    app: gbchn
+    apps.open-cluster-management.io/channel: gbchn
+    apps.open-cluster-management.io/channel-type: Namespace
+    release: gbchn
+  name: gbchn-redismasterservice
+  namespace: gbchn
+spec:
+  template:
+    apiVersion: v1
+    kind: Service
+    metadata:
+      name: redis-master
+      namespace: default
+    spec:
+      ports:
+      - port: 6379
+      selector:
+        app: gbchn
+        release: gbchn
+        role: master
+        tier: backend
+      type: ClusterIP
