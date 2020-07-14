@@ -1,4 +1,7 @@
 resources:
+- ingress.yaml
+- service.yaml
+- deployment.yaml
 - namespace.yaml
 - namespace-app.yaml
 - channel.yaml
