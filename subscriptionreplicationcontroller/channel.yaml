@@ -5,5 +5,4 @@ metadata:
   namespace: mortgagerc-ch
 spec:
   type: GitHub
-  pathname: https://github.com/fxiang1/mortgage.git
-
+  pathname: https://github.com/fxiang1/app-samples.git
