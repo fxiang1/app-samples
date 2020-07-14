@@ -1,0 +1,12 @@
+apiVersion: apps.open-cluster-management.io/v1
+kind: PlacementRule
+metadata:
+  labels:
+    app: nginx-app
+  name: nginx-placement
+  namespace: nginx-app-ns
+spec:
+  clusterReplicas: 3
+  clusterSelector:
+    matchLabels:
+      environment: Dev
