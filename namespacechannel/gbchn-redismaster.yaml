@@ -14,7 +14,7 @@ spec:
     kind: Deployment
     metadata:
       name: gbchn-redismaster
-      namespace: default
+      namespace: project-workspace
     spec:
       replicas: 1
       selector:

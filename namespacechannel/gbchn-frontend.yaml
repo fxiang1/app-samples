@@ -11,10 +11,10 @@ metadata:
 spec:
   template:
     apiVersion: apps/v1
-        kind: Deployment
+    kind: Deployment
     metadata:
       name: gbchn-frontend
-      namespace: default
+      namespace: project-workspace
     spec:
       replicas: 1
       selector:

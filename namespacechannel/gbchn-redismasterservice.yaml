@@ -14,7 +14,7 @@ spec:
     kind: Service
     metadata:
       name: redis-master
-      namespace: default
+      namespace: project-workspace
     spec:
       ports:
       - port: 6379
