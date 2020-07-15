@@ -14,7 +14,7 @@ spec:
     kind: Service
     metadata:
       name: redis-slave
-      namespace: project-workspace
+      namespace: default
     spec:
       ports:
       - port: 6379

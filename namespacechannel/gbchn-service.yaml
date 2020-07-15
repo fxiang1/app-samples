@@ -17,7 +17,7 @@ spec:
         app: gbchn
         release: gbchn
       name: gbchn
-      namespace: project-workspace
+      namespace: default
     spec:
       ports:
       - port: 80

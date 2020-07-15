@@ -7,14 +7,14 @@ metadata:
     apps.open-cluster-management.io/channel: gbchn
     apps.open-cluster-management.io/channel-type: Namespace
   name: gbchn-frontend
-  namespace: project-workspace
+  namespace: gbchn
 spec:
   template:
     apiVersion: apps/v1
     kind: Deployment
     metadata:
       name: gbchn-frontend
-      namespace: project-workspace
+      namespace: default
     spec:
       replicas: 1
       selector:
