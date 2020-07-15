@@ -5,4 +5,4 @@ metadata:
   namespace: gbapp-ch
 spec:
   pathname: 'https://github.com/kubernetes/examples.git'
-  type: GitHub
+  type: Git

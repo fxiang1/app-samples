@@ -5,4 +5,4 @@ metadata:
   namespace: mortgage-ch
 spec:
   pathname: 'https://github.com/fxiang1/mortgage.git'
-  type: GitHub
+  type: Git

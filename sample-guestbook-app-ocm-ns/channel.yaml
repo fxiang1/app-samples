@@ -4,5 +4,5 @@ metadata:
   name: git-helm-ch
   namespace: gb-app-latest-ns
 spec:
-  pathname: 'https://github.com/rokej/testrepo.git'
-  type: GitHub
+  pathname: 'https://github.com/fxiang1/app-samples.git'
+  type: Git

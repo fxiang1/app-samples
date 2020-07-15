@@ -5,4 +5,4 @@ metadata:
   namespace: demo
 spec:
   pathname: 'https://github.com/open-cluster-management/demo-subscription-gitops.git'
-  type: GitHub
+  type: Git

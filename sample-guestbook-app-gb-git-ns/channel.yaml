@@ -5,4 +5,4 @@ metadata:
   namespace: deploy-git
 spec:
   pathname: 'https://github.com/open-cluster-management/deploy.git'
-  type: GitHub
+  type: Git
