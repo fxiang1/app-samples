@@ -5,6 +5,9 @@ metadata:
   namespace: cassandra-app-ns
   labels:
     app: cassandra-app-cassandra
+  annotations:
+    apps.open-cluster-management.io/github-path: cassandra
+    apps.open-cluster-management.io/github-branch: master
 spec:
   channel: cassandra-ch/cassandra-channel
   placement:
