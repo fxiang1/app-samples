@@ -1,0 +1,12 @@
+apiVersion: apps.open-cluster-management.io/v1
+kind: PlacementRule
+metadata:
+  name: demo-saude-digital
+  namespace: demo-saude-digital
+  labels:
+    app: demo-saude-digital
+spec:
+  clusterReplicas: 2
+  clusterSelector:
+    matchLabels:
+      environment: Dev

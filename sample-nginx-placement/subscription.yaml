@@ -1,0 +1,13 @@
+apiVersion: apps.open-cluster-management.io/v1
+kind: Subscription
+metadata:
+  name: placement-nginx-subscription
+  namespace: nginx
+  labels:
+    app: nginx-placement
+spec:
+  channel: demo/gitops
+  placement:
+    placementRef:
+      name: nginx-placement
+      kind: PlacementRule

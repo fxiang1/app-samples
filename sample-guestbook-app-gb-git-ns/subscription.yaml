@@ -1,0 +1,13 @@
+apiVersion: apps.open-cluster-management.io/v1
+kind: Subscription
+metadata:
+  name: guestbook-app
+  namespace: app-guestbook-git-ns
+  labels:
+    app: guestbook-app
+spec:
+  channel: deploy-git/guestbook-app-latest
+  placement:
+    placementRef:
+      name: dev-clusters
+      kind: PlacementRule

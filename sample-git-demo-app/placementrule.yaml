@@ -1,0 +1,9 @@
+apiVersion: apps.open-cluster-management.io/v1
+kind: PlacementRule
+metadata:
+  name: dev-clusters
+  namespace: demo-ns-helm-git
+spec:
+  clusterLabels:
+    matchLabels:
+      environment: Dev
