@@ -1,0 +1,12 @@
+apiVersion: apps.open-cluster-management.io/v1
+kind: PlacementRule
+metadata:
+  name: cassandra-app-placement
+  namespace: cassandra-app-ns
+  labels:
+    app: cassandra-app-cassandra
+spec:
+  clusterLabels:
+    matchLabels:
+      environment: Dev
+  clusterReplicas: 2
