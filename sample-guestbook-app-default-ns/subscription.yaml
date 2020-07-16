@@ -3,6 +3,9 @@ kind: Subscription
 metadata:
   name: guestbook-app
   namespace: default
+  annotations:
+    apps.open-cluster-management.io/github-path: guestbook/all-in-one
+    apps.open-cluster-management.io/github-branch: master  
   labels:
     app: guestbook-app
 spec:
