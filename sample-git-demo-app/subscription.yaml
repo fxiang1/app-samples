@@ -5,6 +5,9 @@ metadata:
   namespace: demo-ns-helm-git
   labels:
     app: git-demo-app
+  annotations:
+    apps.open-cluster-management.io/github-path: resources-roke/helmchart
+    apps.open-cluster-management.io/github-branch: master
 spec:
   channel: demo-ns-helm-git-ch/git-helm-ch
   placement:
