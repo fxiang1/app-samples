@@ -1,0 +1,13 @@
+apiVersion: apps.open-cluster-management.io/v1
+kind: Subscription
+metadata:
+  name: blue-nginx-subscription
+  namespace: nginx-blue
+  labels:
+    app: nginx-deployment
+spec:
+  channel: demo/gitops
+  placement:
+    placementRef:
+      name: nginx-deployment
+      kind: PlacementRule

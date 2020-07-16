@@ -1,0 +1,12 @@
+apiVersion: apps.open-cluster-management.io/v1
+kind: PlacementRule
+metadata:
+  name: towhichcluster
+  namespace: git-sub-ns-helm
+  labels:
+    name: git-sub
+spec:
+  clusterLabels:
+    matchLabels:
+      environment: Dev
+  clusterReplicas: 1

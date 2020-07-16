@@ -1,0 +1,8 @@
+apiVersion: apps.open-cluster-management.io/v1
+kind: Channel
+metadata:
+  name: guestbook-app-latest
+  namespace: deploy-git
+spec:
+  pathname: 'https://github.com/open-cluster-management/deploy.git'
+  type: Git

@@ -1,0 +1,19 @@
+apiVersion: apps.open-cluster-management.io/v1
+kind: Subscription
+metadata:
+  name: guestbook-app
+  namespace: open-cluster-management
+  labels:
+    app: guestbook-app
+  aannotations:
+    apps.open-cluster-management.io/github-path: resources-roke/helmchart
+    apps.open-cluster-management.io/github-branch: master
+spec:
+  channel: gb-app-latest-ns/git-helm-ch
+  packageFilter:
+    filterRef:
+      name: resource-filter-configmap
+  placement:
+    placementRef:
+      name: dev-clusters
+      kind: PlacementRule

@@ -1,0 +1,13 @@
+apiVersion: apps.open-cluster-management.io/v1
+kind: Subscription
+metadata:
+  name: green-nginx-subscription
+  namespace: nginx-green
+  labels:
+    app: nginx-deployment
+spec:
+  channel: demo/gitops
+  placement:
+    placementRef:
+      name: nginx-deployment
+      kind: PlacementRule

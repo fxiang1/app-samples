@@ -1,0 +1,8 @@
+apiVersion: apps.open-cluster-management.io/v1
+kind: Channel
+metadata:
+  name: github-redhat-sa-brazil-demo-summitgov-cy20
+  namespace: demo-saude-digital-repos
+spec:
+  pathname: 'https://github.com/redhat-sa-brazil/demo-summitgov-cy20.git'
+  type: Git

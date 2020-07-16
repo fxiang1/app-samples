@@ -1,0 +1,11 @@
+apiVersion: apps.open-cluster-management.io/v1
+kind: PlacementRule
+labels:
+  app: nginx-deployment
+metadata:
+  name: nginx-deployment
+  namespace: nginx-blue
+spec:
+  clusterSelector:
+    matchLabels:
+      environment: Dev

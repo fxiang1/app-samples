@@ -1,0 +1,15 @@
+apiVersion: apps.open-cluster-management.io/v1
+kind: Subscription
+metadata:
+  name: demo-subscription
+  namespace: demo-ns-helm-git
+  labels:
+    app: git-demo-app
+  annotations:
+    apps.open-cluster-management.io/github-path: resources-roke/helmchart
+    apps.open-cluster-management.io/github-branch: master
+spec:
+  channel: demo-ns-helm-git-ch/git-helm-ch
+  placement:
+    placementRef:
+      name: dev-clusters

@@ -1,0 +1,8 @@
+apiVersion: apps.open-cluster-management.io/v1
+kind: Channel
+metadata:
+  name: guestbook-app-latest
+  namespace: gbapp-ch
+spec:
+  pathname: 'https://github.com/kubernetes/examples.git'
+  type: Git
