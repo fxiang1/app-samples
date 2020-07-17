@@ -1,3 +1,4 @@
+---
 apiVersion: apps.open-cluster-management.io/v1
 kind: PlacementRule
 labels:
@@ -5,6 +6,18 @@ labels:
 metadata:
   name: nginx-deployment
   namespace: nginx-blue
+spec:
+  clusterSelector:
+    matchLabels:
+      environment: Dev
+---
+apiVersion: apps.open-cluster-management.io/v1
+kind: PlacementRule
+metadata:
+  name: nginx-deployment
+  namespace: nginx-green
+  labels:
+    app: nginx-deployment
 spec:
   clusterSelector:
     matchLabels:

@@ -1,14 +1,9 @@
 resources:
 - namespace.yaml
-- namespace-gitops-ch.yaml
-- namespace-mortgagecm-ch.yaml
-- namespace-mortgage-ch.yaml
 - channel-gitops.yaml
-- channel-mortgagecm-ch.yaml
-- channel-mortgage-ch.yaml
 - placementrule.yaml
-- subscription-gitops-1.yaml
-- subscription-gitops-2.yaml
-- subscription-mortgagecm-ch.yaml
-- subscription-mortgage-ch.yaml
+- ingress-nginx-subscription-blue.yaml
+- ingress-nginx-subscription-green.yaml
+- nginx-subscription-blue.yaml
+- nginx-subscription-green.yaml
 - application.yaml

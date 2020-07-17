@@ -1,4 +1,15 @@
+---
 apiVersion: v1
 kind: Namespace
 metadata:
   name: nginx-blue
+---
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: nginx-green 
+---
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: gitops-ch-ns 
