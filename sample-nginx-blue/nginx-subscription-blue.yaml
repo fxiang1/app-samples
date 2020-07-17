@@ -9,7 +9,7 @@ metadata:
     apps.open-cluster-management.io/github-path: blueGreen/nginx/deployment
     apps.open-cluster-management.io/github-branch: blue-nginx      
 spec:
-  channel: demo/gitops
+  channel: gitops-ch-ns/gitops
   placement:
     placementRef:
       name: nginx-deployment
