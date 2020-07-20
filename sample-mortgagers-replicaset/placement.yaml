@@ -2,6 +2,7 @@ apiVersion: apps.open-cluster-management.io/v1
 kind: PlacementRule
 metadata:
   name: mortgagers-placement
+  namespace: default  
   labels:
     app: mortgagers
 spec:

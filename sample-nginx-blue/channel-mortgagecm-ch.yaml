@@ -1,8 +1,0 @@
-apiVersion: apps.open-cluster-management.io/v1
-kind: Channel
-metadata:
-  name: mortgagecm-channel
-  namespace: mortgagecm-ch
-spec:
-  pathname: 'https://github.com/fxiang1/mortgage.git'
-  type: Git

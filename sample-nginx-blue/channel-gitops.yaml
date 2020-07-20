@@ -2,7 +2,7 @@ apiVersion: apps.open-cluster-management.io/v1
 kind: Channel
 metadata:
   name: gitops
-  namespace: demo
+  namespace: gitops-ch-ns
 spec:
   pathname: 'https://github.com/open-cluster-management/demo-subscription-gitops.git'
   type: Git

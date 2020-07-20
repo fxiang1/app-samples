@@ -5,6 +5,9 @@ metadata:
   namespace: nginx
   labels:
     app: nginx-placement
+  annotations:
+    apps.open-cluster-management.io/github-path: placement/nginx
+    apps.open-cluster-management.io/github-branch: master  
 spec:
   channel: demo/gitops
   placement:
