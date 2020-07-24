@@ -1,0 +1,8 @@
+resources:
+- ns.yaml
+- ns-ch.yaml
+- channel.yaml
+- placement.yaml
+- subscription.yaml
+- deployable.yaml
+- application.yaml

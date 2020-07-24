@@ -1,0 +1,18 @@
+apiVersion: apps.open-cluster-management.io/v1
+kind: Deployable
+metadata:
+  annotations:
+    apps.open-cluster-management.io/is-local-deployable: "false"
+  labels:
+    app: nginx-app-details-acmtest-helmrepo
+  name: example-configmap-acmtest-helmrepo
+  namespace: acmtest-helmrepo-ns-sub
+spec:
+  template:
+    apiVersion: v1
+    kind: ConfigMap
+    metadata:
+      name: config1-acmtest-helmrepo
+      namespace: default
+    data:
+      purpose: for test

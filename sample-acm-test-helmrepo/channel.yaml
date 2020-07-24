@@ -1,0 +1,10 @@
+apiVersion: apps.open-cluster-management.io/v1
+kind: Channel
+metadata:
+  name: predev-ch-acmtest-helmrepo
+  namespace: acmtest-helmrepo-ns-ch
+  labels:
+    app: nginx-app-details-acmtest-helmrepo
+spec:
+  type: HelmRepo
+  pathname: https://kubernetes-charts.storage.googleapis.com/

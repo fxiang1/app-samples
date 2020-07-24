@@ -1,0 +1,21 @@
+apiVersion: apps.open-cluster-management.io/v1
+kind: Subscription
+metadata:
+  name: nginx-acmtest-helmrepo
+  namespace: acmtest-helmrepo-ns-sub
+  labels:
+    app: nginx-app-details-acmtest-helmrepo
+spec:
+  channel: acmtest-helmrepo-ns-ch/predev-ch-acmtest-helmrepo
+  name: nginx-ingress
+  packageFilter:
+    version: "1.36.x"
+  placement:
+    placementRef:
+      kind: PlacementRule
+      name: towhichcluster-acmtest-helmrepo
+  overrides:
+  - clusterName: "/"
+    clusterOverrides:
+    - path: "metadata.namespace"
+      value: default
