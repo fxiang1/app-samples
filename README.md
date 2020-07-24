@@ -3,7 +3,7 @@
 Requirements:
 - Make sure you have the oc CLI 4.3 or above installed.
 
-The application resources are stored in sample-* folders in this repo.
+The application resources are stored in **sample-*** folders in this repo.
 
 To deploy a sample, do the following:
 
