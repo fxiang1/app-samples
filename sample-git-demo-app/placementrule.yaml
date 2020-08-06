@@ -4,6 +4,6 @@ metadata:
   name: dev-clusters
   namespace: demo-ns-helm-git
 spec:
-  clusterLabels:
+  clusterSelector:
     matchLabels:
       environment: Dev

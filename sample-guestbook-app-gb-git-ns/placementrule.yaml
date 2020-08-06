@@ -4,7 +4,7 @@ metadata:
   name: dev-clusters
   namespace: app-guestbook-git-ns
 spec:
-  clusterLabels:
+  clusterSelector:
     matchLabels:
       environment: Dev
   clusterReplicas: 4

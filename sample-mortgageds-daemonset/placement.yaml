@@ -7,6 +7,6 @@ metadata:
     app: mortgageds
 spec:
   clusterReplicas: 3
-  clusterLabels:
+  clusterSelector:
     matchLabels:
       environment: Dev

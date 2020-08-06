@@ -4,7 +4,7 @@ metadata:
   name: dev-clusters
   namespace: open-cluster-management
 spec:
-  clusterLabels:
+  clusterSelector:
     matchLabels:
       environment: Dev
   clusterReplicas: 0
