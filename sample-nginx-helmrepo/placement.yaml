@@ -1,0 +1,7 @@
+apiVersion: apps.open-cluster-management.io/v1
+kind: PlacementRule
+metadata:
+  name: towhichcluster
+  namespace: ns-sub-1
+spec:
+  clusterSelector: {}
