@@ -17,7 +17,7 @@ spec:
       containers:
       - name: helloworld-app-container
         image: "fxiang/helloworld:0.0.1"
-        imagePullPolicy: Always
+        imagePullPolicy: IfNotPresent
         ports:
           - containerPort: 3002
         env:
