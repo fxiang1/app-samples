@@ -2,7 +2,6 @@ apiVersion: apps/v1
 kind: ReplicaSet
 metadata:
   name: mortgagers-deploy
-  namespace: default
   labels:
     app: mortgagers-mortgage
 spec:
