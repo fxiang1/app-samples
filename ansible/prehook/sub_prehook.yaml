@@ -9,5 +9,5 @@ metadata:
   name: prehook-test
   namespace: ansible
 spec:
-  job_template_name: Demo Pre Job
+  job_template_name: Demo Job Template
   tower_auth_secret: toweraccess

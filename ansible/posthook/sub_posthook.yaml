@@ -7,5 +7,5 @@ metadata:
   name: posthook-test
   namespace: ansible
 spec:
-  job_template_name: Demo Post Job
+  job_template_name: Demo Job Template
   tower_auth_secret: toweraccess
