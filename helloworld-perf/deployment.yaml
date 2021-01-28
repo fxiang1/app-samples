@@ -8,7 +8,7 @@ spec:
   selector:
     matchLabels:
       app: pause-app
-  replicas: 400 
+  replicas: 500 
   template:
     metadata:
       labels:
