@@ -1,0 +1,9 @@
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: aut-helm-wordpress-ns
+---
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: hchartsbitnamicom-bitnami-ns

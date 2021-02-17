@@ -1,0 +1,8 @@
+apiVersion: apps.open-cluster-management.io/v1
+kind: Channel
+metadata:
+  name: hchartsbitnamicom-bitnami
+  namespace: hchartsbitnamicom-bitnami-ns
+spec:
+  pathname: https://charts.bitnami.com/bitnami
+  type: HelmRepo

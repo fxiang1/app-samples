@@ -1,0 +1,11 @@
+apiVersion: apps.open-cluster-management.io/v1
+kind: PlacementRule
+metadata:
+  labels:
+    app: aut-helm-wordpress
+  name: aut-helm-wordpress-placement-1
+  namespace: aut-helm-wordpress-ns
+spec:
+  clusterSelector:
+    matchLabels:
+      local-cluster: 'true'

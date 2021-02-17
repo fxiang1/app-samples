@@ -1,0 +1,17 @@
+apiVersion: apps.open-cluster-management.io/v1
+kind: Subscription
+metadata:
+  labels:
+    app: aut-helm-wordpress
+  name: aut-helm-wordpress-subscription-1
+  namespace: aut-helm-wordpress-ns
+spec:
+  channel: hchartsbitnamicom-bitnami-ns/hchartsbitnamicom-bitnami
+  name: wordpress
+  packageOverrides:
+    - packageAlias: wordpress
+      packageName: wordpress
+  placement:
+    placementRef:
+      kind: PlacementRule
+      name: aut-helm-wordpress-placement-1
