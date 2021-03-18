@@ -1,0 +1,11 @@
+apiVersion: apps.open-cluster-management.io/v1
+kind: PlacementRule
+metadata:
+  namespace: stackrox
+  name: advanced-cluster-security
+  labels:
+    app: advanced-cluster-security
+spec:
+  clusterSelector:
+    matchLabels:
+      local-cluster: 'true'

@@ -1,0 +1,85 @@
+apiVersion: apps.open-cluster-management.io/v1
+kind: Subscription
+metadata:
+  namespace: stackrox
+  name: advanced-cluster-security
+  labels:
+    app: advanced-cluster-security
+spec:
+  name: stackrox-central-services
+  channel: stackrox/advanced-cluster-security-ch
+  packageFilter:
+    version: 56.1.0
+  packageOverrides:
+    - packageName: stackrox-central-services
+      packageAlias: stackrox-central-services
+      packageOverrides:
+      - path: spec
+        value:
+            imagePullSecrets:
+              allowNone: false
+              useExisting:
+              - my-pull-secret
+              useFromDefaultServiceAccount: false
+            image:
+              registry: stackrox.io
+            env:
+              openshift: true
+              istio: false
+              platform: default
+              offlineMode: false
+            central:
+              disableTelemetry: false
+              config: |
+                maintenance:
+                  safeMode: false
+                  compaction:
+                    enabled: true
+                    bucketFillFraction: .5
+                    freeFractionThreshold: 0.75
+              endpointsConfig: |
+                endpoints:
+                - listen: ":8080"
+                  protocols:
+                  - http
+                  tls:
+                    disable: true
+              resources:
+                requests:
+                  memory: "4Gi"
+                  cpu: "1500m"
+                limits:
+                  memory: "8Gi"
+                  cpu: "4000m"
+              persistence:
+                persistentVolumeClaim:
+                  claimName: stackrox-db
+                  createClaim: true
+                  size: 10
+              exposure:
+                route:
+                  enabled: true
+            scanner:
+              disable: false
+              replicas: 2
+              logLevel: INFO
+              autoscaling:
+                disable: true
+              resources:
+                requests:
+                  memory: "1500Mi"
+                  cpu: "1000m"
+                limits:
+                  memory: "3000Mi"
+                  cpu: "2000m"
+              dbResources:
+                limits:
+                  cpu: "2000m"
+                  memory: "4Gi"
+                requests:
+                  cpu: "200m"
+                  memory: "200Mi"
+  placement:
+    placementRef:
+      name: advanced-cluster-security
+      kind: PlacementRule

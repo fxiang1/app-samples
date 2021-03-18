@@ -1,0 +1,10 @@
+apiVersion: apps.open-cluster-management.io/v1
+kind: Channel
+metadata:
+  name: advanced-cluster-security-ch
+  namespace: stackrox
+  labels:
+    app: advanced-cluster-security
+spec:
+  type: HelmRepo
+  pathname: https://charts.stackrox.io
