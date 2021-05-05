@@ -1,0 +1,32 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: helloworld-app-deploy
+  labels:
+    app: helloworld-app
+spec:
+  selector:
+    matchLabels:
+      app: helloworld-app
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: helloworld-app
+    spec:
+      containers:
+      - name: helloworld-app-container
+        image: "fxiang/helloworld:0.0.1"
+        imagePullPolicy: Always
+        ports:
+          - containerPort: 3002
+        env:
+          - name: "PORT"
+            value: "3002"
+        resources:
+          limits:
+            cpu: 200m
+            memory: 256Mi
+          request:
+            cpu: 200m
+            memory: 256Mi
