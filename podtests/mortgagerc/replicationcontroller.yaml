@@ -1,0 +1,28 @@
+apiVersion: v1
+kind: ReplicationController
+metadata:
+  name: mortgagerc-deploy
+  namespace: default
+  labels:
+    app: mortgagerc-mortgage
+spec:
+  replicas: 1
+  selector:
+    app: mortgagerc-mortgage
+  template:
+    metadata:
+      labels:
+        app: mortgagerc-mortgage
+    spec:
+      containers:
+        - name: mortgagerc-mortgage
+          image: 'fxiang/mortgage:0.4.0'
+          ports:
+            - containerPort: 9080
+              protocol: TCP
+          resources:
+            limits:
+              cpu: 200m
+              memory: 256Mi
+          imagePullPolicy: Always
+      terminationGracePeriodSeconds: 30
