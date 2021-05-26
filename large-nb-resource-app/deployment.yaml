@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: pause-deploy2
+  labels:
+    app: pause-app
+spec:
+  selector:
+    matchLabels:
+      app: pause-app
+  replicas: 1 
+  template:
+    metadata:
+      labels:
+        app: pause-app
+    spec:
+      containers:
+      - name: pause-container
+        image: "gcr.io/google_containers/pause-amd64:3.0"
+        imagePullPolicy: IfNotPresent
+        ports:
+          - containerPort: 80

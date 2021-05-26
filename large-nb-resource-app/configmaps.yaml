@@ -1,0 +1,146 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: test-configmap-2222
+data:
+  path: resource
+---
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: test-configmap-2
+data:
+  path: resource
+---
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: test-configmap-3
+data:
+  path: resource
+---
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: test-configmap-4
+data:
+  path: resource
+---
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: test-configmap-5
+data:
+  path: resource
+---
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: test-configmap-6
+data:
+  path: resource
+---
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: test-configmap-7
+data:
+  path: resource
+---
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: test-configmap-8
+data:
+  path: resource
+---
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: test-configmap-9
+data:
+  path: resource
+---
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: test-configmap-10
+data:
+  path: resource
+---
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: test-configmap-11
+data:
+  path: resource
+---
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: test-configmap-12
+data:
+  path: resource
+---
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: test-configmap-13
+data:
+  path: resource
+---
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: test-configmap-14
+data:
+  path: resource
+---
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: test-configmap-15
+data:
+  path: resource
+---
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: test-configmap-16
+data:
+  path: resource
+---
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: test-configmap-17
+data:
+  path: resource
+---
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: test-configmap-18
+data:
+  path: resource
+---
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: test-configmap-19
+data:
+  path: resource
+---
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: test-configmap-20
+data:
+  path: resource
+---
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: test-configmap-21
+data:
+  path: resource
