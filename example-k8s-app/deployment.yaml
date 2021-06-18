@@ -1,0 +1,36 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app: example
+  name: example
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: example
+  template:
+    metadata:
+      labels:
+        app: example
+    spec:
+      containers:
+        - image: alpinelinux/darkhttpd
+          name: darkhttpd
+          volumeMounts:
+            - name: data
+              mountPath: /data
+            - name: example-secret
+              mountPath: /etc/my_first_secret
+              subPath: my_first_secret
+          containerPorts:
+            - name: http
+              protocol: TCP
+              containerPort: 8080
+      volumes:
+        - name: data
+          persistentVolumeClaim:
+            claimName: example-data-claim
+        - name: example-secret
+          secret:
+            secretName: example-secret
