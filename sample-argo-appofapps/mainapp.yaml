@@ -1,0 +1,16 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: mainapp
+  namespace: openshift-gitops
+  finalizers:
+  - resources-finalizer.argocd.argoproj.io
+spec:
+  destination:
+    namespace: feng
+    name: in-cluster
+  project: default
+  source:
+    path: childargoapps
+    repoURL: https://github.com/fxiang1/app-samples
+    targetRevision: HEAD
