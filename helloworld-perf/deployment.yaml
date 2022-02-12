@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: pause-container
-        image: "gcr.io/google_containers/pause-amd64:3.0"
+        image: "quay.io/fxiang1/helloworld:0.0.1"
         imagePullPolicy: IfNotPresent
         ports:
           - containerPort: 80
