@@ -1,7 +1,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: superlongappnameaaaaaaaaaaaaaaaaaaaaaa
+  name: helloworld-perf-deploy
   labels:
     app: pause-app
 spec:
@@ -15,8 +15,8 @@ spec:
         app: pause-app
     spec:
       containers:
-      - name: pause-container
-        image: "quay.io/fxiang1/helloworld:0.0.1"
+      - name: container
+        image: "gcr.io/google_containers/pause-amd64:3.0"
         imagePullPolicy: IfNotPresent
         ports:
           - containerPort: 80
