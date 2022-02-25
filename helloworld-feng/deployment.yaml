@@ -8,7 +8,7 @@ spec:
   selector:
     matchLabels:
       app: helloworld-app-feng
-  replicas: 1
+  replicas: 2
   template:
     metadata:
       labels:
@@ -23,6 +23,21 @@ spec:
         env:
           - name: "PORT"
             value: "3002"
+        resources:
+          limits:
+            cpu: 200m
+            memory: 256Mi
+          request:
+            cpu: 200m
+            memory: 256Mi
+      - name: second-helloworld-app-container
+        image: "fxiang/helloworld:0.0.1"
+        imagePullPolicy: IfNotPresent
+        ports:
+          - containerPort: 3003
+        env:
+          - name: "PORT"
+            value: "3003"
         resources:
           limits:
             cpu: 200m
