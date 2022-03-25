@@ -2,7 +2,6 @@ apiVersion: v1
 kind: Service
 metadata:
   name: mortgagepod-svc
-  namespace: default
   labels:
     app: mortgagepod-mortgage
 spec:

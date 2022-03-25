@@ -2,7 +2,6 @@ apiVersion: apps/v1
 kind: DaemonSet
 metadata:
   name: mortgageds-deploy
-  namespace: default
   labels:
     app: mortgageds-mortgage
 spec:
