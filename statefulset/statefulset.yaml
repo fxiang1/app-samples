@@ -80,17 +80,4 @@ spec:
         volumeMounts:
         - name: cassandra-data
           mountPath: /var/lib/cassandra
-  # These are converted to volume claims by the controller
-  # and mounted at the paths mentioned above.
-  # do not use these in production until ssd GCEPersistentDisk or other ssd pd
-  volumeClaimTemplates:
-  - metadata:
-      name: cassandra-data
-      annotations:
-        volume.beta.kubernetes.io/storage-class: gp2
-    spec:
-      accessModes: [ "ReadWriteOnce" ]
-      resources:
-        requests:
-          storage: 1Gi
 
