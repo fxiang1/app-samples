@@ -18,35 +18,17 @@ spec:
       terminationGracePeriodSeconds: 1800
       containers:
       - name: cassandra
-        image: gcr.io/google-samples/cassandra:v14
+        image: "quay.io/fxiang1/helloworld:0.0.1"
         imagePullPolicy: Always
         ports:
-        - containerPort: 7000
-          name: intra-node
-        - containerPort: 7001
-          name: tls-intra-node
-        - containerPort: 7199
-          name: jmx
-        - containerPort: 9042
-          name: cql
+        - containerPort: 3002
         resources:
           limits:
-            cpu: "500m"
-            memory: 1Gi
+            cpu: "200m"
+            memory: 256Mi
           requests:
-           cpu: "500m"
-           memory: 1Gi
-        securityContext:
-          capabilities:
-            add:
-              - IPC_LOCK
-        lifecycle:
-          preStop:
-            exec:
-              command:
-              - /bin/sh
-              - -c
-              - nodetool drain
+           cpu: "50m"
+           memory: 64Mi
         env:
           - name: MAX_HEAP_SIZE
             value: 512M
@@ -66,18 +48,4 @@ spec:
             valueFrom:
               fieldRef:
                 fieldPath: status.podIP
-        readinessProbe:
-          exec:
-            command:
-            - /bin/bash
-            - -c
-            - /ready-probe.sh
-          initialDelaySeconds: 15
-          timeoutSeconds: 5
-        # These volume mounts are persistent. They are like inline claims,
-        # but not exactly because the names need to match exactly one of
-        # the stateful pod volumes.
-        volumeMounts:
-        - name: cassandra-data
-          mountPath: /var/lib/cassandra
 
