@@ -18,3 +18,15 @@ spec:
       destination:
         server: '{{server}}'
         namespace: feng-helloworld-applicationset
+      syncPolicy:
+        syncOptions:
+          - CreateNamespace=true
+          - PruneLast=true
+          - Replace=true
+          - ApplyOutOfSyncOnly=true
+          - Validate=false
+        automated:
+          prune: true
+          allowEmpty: true
+          selfHeal: true
+

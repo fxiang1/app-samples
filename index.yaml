@@ -3,148 +3,158 @@ entries:
   helloworld-helm:
   - apiVersion: v1
     appVersion: "1.0"
-    created: "2021-03-30T15:13:58.352711-04:00"
+    created: "2022-05-12T16:51:14.124648-04:00"
     description: A sample hello world helm chart
     digest: 049c7ca45d6219803c9c0e04d39b318e915c5edc3ccdb4a7da5b26534660d95c
     name: helloworld-helm
     urls:
-    - https://raw.githubusercontent.com/fxiang1/app-samples/master/helloworld-helm-0.2.0.tgz
+    - https://raw.githubusercontent.com/fxiang1/app-samples/main/helloworld-helm-0.2.0.tgz
     version: 0.2.0
   - apiVersion: v1
     appVersion: "1.0"
-    created: "2021-03-30T15:13:58.352417-04:00"
+    created: "2022-05-12T16:51:14.124042-04:00"
     description: A sample hello world helm chart
     digest: 3e44b3b244b6a6a038eb99260bb767865d711cede962c1dbc003f62d26113779
     name: helloworld-helm
     urls:
-    - https://raw.githubusercontent.com/fxiang1/app-samples/master/helloworld-helm-0.1.0.tgz
+    - https://raw.githubusercontent.com/fxiang1/app-samples/main/helloworld-helm-0.1.0.tgz
     version: 0.1.0
+  helloworld-helm-secret:
+  - apiVersion: v1
+    appVersion: "1.0"
+    created: "2022-05-12T16:51:14.125309-04:00"
+    description: A sample hello world helm chart with a secret
+    digest: 050ee31f28fd2b6aed70aa013e1b01be11f4ae94623c383187490f62bf78ac14
+    name: helloworld-helm-secret
+    urls:
+    - https://raw.githubusercontent.com/fxiang1/app-samples/main/helloworld-helm-secret-0.3.0.tgz
+    version: 0.3.0
   mortgage:
   - apiVersion: v1
     appVersion: "1.0"
-    created: "2021-03-30T15:13:58.360029-04:00"
+    created: "2022-05-12T16:51:14.134368-04:00"
     description: A sample mortgage app
     digest: f139201a1263962f015c5da371f8f030defca064df64a7bf717ce0674e947db8
     name: mortgage
     urls:
-    - https://raw.githubusercontent.com/fxiang1/app-samples/master/mortgage-1.0.3.tgz
+    - https://raw.githubusercontent.com/fxiang1/app-samples/main/mortgage-1.0.3.tgz
     version: 1.0.3
   - apiVersion: v1
     appVersion: "1.0"
-    created: "2021-03-30T15:13:58.359383-04:00"
+    created: "2022-05-12T16:51:14.133862-04:00"
     description: A sample mortgage app
     digest: b6a97918b669d5c74062cff5eee5f618d8d16e1ae8df4e862658367133fac64c
     name: mortgage
     urls:
-    - https://raw.githubusercontent.com/fxiang1/app-samples/master/mortgage-1.0.2.tgz
+    - https://raw.githubusercontent.com/fxiang1/app-samples/main/mortgage-1.0.2.tgz
     version: 1.0.2
   - apiVersion: v1
     appVersion: "1.0"
-    created: "2021-03-30T15:13:58.358924-04:00"
+    created: "2022-05-12T16:51:14.133443-04:00"
     description: A sample mortgage app
     digest: 7e8c9dc9edaa260b808d4dc114d3ca4a2139ddfc337f5278f9aafc7be6c0b773
     name: mortgage
     urls:
-    - https://raw.githubusercontent.com/fxiang1/app-samples/master/mortgage-1.0.1.tgz
+    - https://raw.githubusercontent.com/fxiang1/app-samples/main/mortgage-1.0.1.tgz
     version: 1.0.1
   - apiVersion: v1
     appVersion: "1.0"
-    created: "2021-03-30T15:13:58.358385-04:00"
+    created: "2022-05-12T16:51:14.132931-04:00"
     description: A sample mortgage app
     digest: cd04f871a0969327e8b18859f5ac775ca2052f00d6024fd2b480bd589a2196fd
     name: mortgage
     urls:
-    - https://raw.githubusercontent.com/fxiang1/app-samples/master/mortgage-1.0.0.tgz
+    - https://raw.githubusercontent.com/fxiang1/app-samples/main/mortgage-1.0.0.tgz
     version: 1.0.0
   - apiVersion: v1
     appVersion: "1.0"
-    created: "2021-03-30T15:13:58.357751-04:00"
+    created: "2022-05-12T16:51:14.132431-04:00"
     description: A sample mortgage app
     digest: ef4e97e5ff64c3a98b8a6dde2f2bfa22da94241b30d948bbb008abb352d89885
     name: mortgage
     urls:
-    - https://raw.githubusercontent.com/fxiang1/app-samples/master/mortgage-0.9.0.tgz
+    - https://raw.githubusercontent.com/fxiang1/app-samples/main/mortgage-0.9.0.tgz
     version: 0.9.0
   - apiVersion: v1
     appVersion: "1.0"
-    created: "2021-03-30T15:13:58.357284-04:00"
+    created: "2022-05-12T16:51:14.131992-04:00"
     description: A ficticious mortgage app
     digest: 85c990c53dbf6dcb947bc5938a17b8e509737b9ea7fdbaacb2bbf665bb126986
     name: mortgage
     urls:
-    - https://raw.githubusercontent.com/fxiang1/app-samples/master/mortgage-0.8.0.tgz
+    - https://raw.githubusercontent.com/fxiang1/app-samples/main/mortgage-0.8.0.tgz
     version: 0.8.0
   - apiVersion: v1
     appVersion: "1.0"
-    created: "2021-03-30T15:13:58.356815-04:00"
+    created: "2022-05-12T16:51:14.131328-04:00"
     description: A ficticious mortgage app
     digest: b32144b897ffa427087e9187cef5025f990d81d271b99495b28753a5054e2f00
     name: mortgage
     urls:
-    - https://raw.githubusercontent.com/fxiang1/app-samples/master/mortgage-0.7.0.tgz
+    - https://raw.githubusercontent.com/fxiang1/app-samples/main/mortgage-0.7.0.tgz
     version: 0.7.0
   - apiVersion: v1
     appVersion: "1.0"
-    created: "2021-03-30T15:13:58.356349-04:00"
+    created: "2022-05-12T16:51:14.129714-04:00"
     description: A ficticious mortgage app
     digest: ef03a52feb4d6567dea3187df846d1beecbd73308c8b3d56d7d8afa9df9bfd50
     name: mortgage
     urls:
-    - https://raw.githubusercontent.com/fxiang1/app-samples/master/mortgage-0.6.0.tgz
+    - https://raw.githubusercontent.com/fxiang1/app-samples/main/mortgage-0.6.0.tgz
     version: 0.6.0
   - apiVersion: v1
     appVersion: "1.0"
-    created: "2021-03-30T15:13:58.355852-04:00"
+    created: "2022-05-12T16:51:14.129103-04:00"
     description: A ficticious mortgage app
     digest: 7567b6fffc917e3b0de4899edc87e8b854539574c6e31d619abab25a536089ea
     name: mortgage
     urls:
-    - https://raw.githubusercontent.com/fxiang1/app-samples/master/mortgage-0.5.0.tgz
+    - https://raw.githubusercontent.com/fxiang1/app-samples/main/mortgage-0.5.0.tgz
     version: 0.5.0
   - apiVersion: v1
     appVersion: "1.0"
-    created: "2021-03-30T15:13:58.354918-04:00"
+    created: "2022-05-12T16:51:14.128375-04:00"
     description: A ficticious mortgage app
     digest: 248b6c7a6941877e88ac5a678cfd334692b3670f691af47ec2ebc19a4031c72c
     name: mortgage
     urls:
-    - https://raw.githubusercontent.com/fxiang1/app-samples/master/mortgage-0.4.0.tgz
+    - https://raw.githubusercontent.com/fxiang1/app-samples/main/mortgage-0.4.0.tgz
     version: 0.4.0
   - apiVersion: v1
     appVersion: "1.0"
-    created: "2021-03-30T15:13:58.35448-04:00"
+    created: "2022-05-12T16:51:14.127897-04:00"
     description: A ficticious mortgage app
     digest: f8a557c4e50a02ff4ace79ad7bd72126f45f1216f93319e50fd4f05e63602302
     name: mortgage
     urls:
-    - https://raw.githubusercontent.com/fxiang1/app-samples/master/mortgage-0.3.0.tgz
+    - https://raw.githubusercontent.com/fxiang1/app-samples/main/mortgage-0.3.0.tgz
     version: 0.3.0
   - apiVersion: v1
     appVersion: "1.0"
-    created: "2021-03-30T15:13:58.354005-04:00"
+    created: "2022-05-12T16:51:14.126978-04:00"
     description: A ficticious mortgage app
     digest: e75775843024b52ce3c23b8b2acf0cf8ee224ab4f2db3f435598c41edf3e87b0
     name: mortgage
     urls:
-    - https://raw.githubusercontent.com/fxiang1/app-samples/master/mortgage-0.2.0.tgz
+    - https://raw.githubusercontent.com/fxiang1/app-samples/main/mortgage-0.2.0.tgz
     version: 0.2.0
   - apiVersion: v1
     appVersion: "1.0"
-    created: "2021-03-30T15:13:58.353395-04:00"
+    created: "2022-05-12T16:51:14.126106-04:00"
     description: A ficticious mortgage app
     digest: 5ea5715d600dffd406e36e340ed896eda8fe0f6d87381c3c9aea9fc49307aad1
     name: mortgage
     urls:
-    - https://raw.githubusercontent.com/fxiang1/app-samples/master/mortgage-0.1.0.tgz
+    - https://raw.githubusercontent.com/fxiang1/app-samples/main/mortgage-0.1.0.tgz
     version: 0.1.0
   mortgage-channel:
   - apiVersion: v1
     appVersion: "1.0"
-    created: "2021-03-30T15:13:58.360489-04:00"
+    created: "2022-05-12T16:51:14.134794-04:00"
     description: A sample mortgage channel
     digest: be7acc104eae8fff0bd64b102e73abc95cf2fdfafbfb3750081f469edc0e2158
     name: mortgage-channel
     urls:
-    - https://raw.githubusercontent.com/fxiang1/app-samples/master/mortgage-channel-1.0.0.tgz
+    - https://raw.githubusercontent.com/fxiang1/app-samples/main/mortgage-channel-1.0.0.tgz
     version: 1.0.0
-generated: "2021-03-30T15:13:58.351607-04:00"
+generated: "2022-05-12T16:51:14.122623-04:00"
