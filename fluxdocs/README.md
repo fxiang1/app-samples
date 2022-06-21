@@ -63,8 +63,10 @@ git push
 For Helm, after you create the bootstrap you can deploy the app by using the sample files from the `helmapp` dir. Create the Helm repo first and then the Helm release.
 
 When you try to create the resource it might fail due to the policy settings. To workaround this you need to set both Kyverno ClusterPolicies to ignore on fail and failure action to audit:
+```
 enforce-define-serviceaccount-policy
 enforce-same-namespace-policy
+```
 
 For example:
 ```
