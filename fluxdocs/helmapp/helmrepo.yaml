@@ -1,0 +1,9 @@
+apiVersion: source.toolkit.fluxcd.io/v1beta2
+kind: HelmRepository
+metadata:
+  name: app-sample
+  namespace: feng-flux-helm
+spec:
+  interval: 30s
+  url: https://raw.githubusercontent.com/fxiang1/app-samples/main
+
