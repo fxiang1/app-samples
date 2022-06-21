@@ -58,6 +58,11 @@ git add -A && git commit -m "Add helloworld Kustomization"
 git push
 ```
 
+7. Use this command to see if the kustomization is applied
+```
+flux get kustomizations --watch
+```
+
 ### Helm sample
 
 For Helm, after you create the bootstrap you can deploy the app by using the sample files from the `helmapp` dir. Create the Helm repo first and then the Helm release.
