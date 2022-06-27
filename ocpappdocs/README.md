@@ -49,7 +49,7 @@ kind: Deployment
 metadata:
   name: helloworld-app-deploy
   labels:
-    app: helloworld-app
+    app: helloworld-app                             <------- New label
 spec:
   selector:
     matchLabels:
