@@ -78,9 +78,9 @@ spec:
             memory: 64Mi
 ```
 
-In this case `helloworld-app` would be the app name.
+In this case `helloworld-app` would be the app name and what displays on the app table.
 
-Here are the top level deploy resources that are support:
+Here are the top level deploy resources that are supported:
 ```
 deployment
 deploymentconfig
