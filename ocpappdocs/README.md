@@ -41,7 +41,7 @@ If we were to create it as-is in OCP by running:
 oc apply -f deployment.yaml
 ```
 
-It would not be recognized as an OCP app, however if we add the label `app` or `app.kubernetes.io/part-of=` to it then the App UI would be able to recongize it as an OCP app:
+it would not be recognized as an OCP app. However, if we add the label `app` or `app.kubernetes.io/part-of` to it then the App UI would be able to recongize it as an OCP app:
 
 ```
 apiVersion: apps/v1
