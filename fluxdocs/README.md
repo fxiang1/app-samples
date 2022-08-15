@@ -2,6 +2,10 @@
 
 ### Git sample
 
+Platform team's example: https://github.com/sabre1041/platform-team
+Apply the yaml after successful installation of the flux community operator
+
+
 0. Setup Git creds
 ```
 export GITHUB_USER=<git_user>
