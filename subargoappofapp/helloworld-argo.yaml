@@ -1,0 +1,21 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: helloworld-argo
+  namespace: openshift-gitops
+spec:
+  destination:
+    name: in-cluster
+    namespace: helloworld-argo
+  project: default
+  source:
+    path: helloworld
+    repoURL: 'https://github.com/fxiang1/app-samples'
+    targetRevision: HEAD
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
+    syncOptions:
+      - CreateNamespace=true
+
