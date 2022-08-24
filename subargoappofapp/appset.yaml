@@ -4,12 +4,12 @@ metadata:
   name: feng-helloworld-applicationset
 spec:
   generators:
-  - clustersDecisionResource:
-      configMapRef: acm-placement
-      labelSelector:
-        matchLabels:
-          cluster.open-cluster-management.io/placement: default-placement
-      requeueAfterSeconds: 180
+    - clusterDecisionResource:
+        configMapRef: acm-placement
+        labelSelector:
+          matchLabels:
+            cluster.open-cluster-management.io/placement: default-placement
+        requeueAfterSeconds: 180
   template: 
     # This is a template Argo CD Application, but with support for parameter substitution.
     metadata:
