@@ -13,7 +13,7 @@ spec:
   template: 
     # This is a template Argo CD Application, but with support for parameter substitution.
     metadata:
-      name: 'feng-helloworld-{{server}}'
+      name: 'feng-helloworld-{{name}}'
     spec:
       project: "default"
       source:
