@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: helloworld-app-svc
+  labels:
+    app: helloworld-app
+spec:
+  type: NodePort
+  ports:
+    - port: 3002
+      targetPort: 3002
+      protocol: TCP
+  selector:
+    app: helloworld-app
+
