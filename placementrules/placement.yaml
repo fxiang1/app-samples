@@ -1,0 +1,78 @@
+apiVersion: apps.open-cluster-management.io/v1
+kind: PlacementRule
+metadata:
+  name: placement1
+  namespace: placement1
+  labels:
+    app: placement1
+spec:
+  clusterReplicas: 1
+  clusterSelector:
+    matchLabels:
+      name: local-cluster
+---
+apiVersion: apps.open-cluster-management.io/v1
+kind: PlacementRule
+metadata:
+  name: placement2
+  namespace: placement2
+  labels:
+    app: placement2
+spec:
+  clusterReplicas: 1
+  clusterSelector:
+    matchLabels:
+      name: local-cluster
+---
+apiVersion: apps.open-cluster-management.io/v1
+kind: PlacementRule
+metadata:
+  name: placement3
+  namespace: placement3
+  labels:
+    app: placement3
+spec:
+  clusterReplicas: 1
+  clusterSelector:
+    matchLabels:
+      name: local-cluster
+---
+apiVersion: apps.open-cluster-management.io/v1
+kind: PlacementRule
+metadata:
+  name: placement4
+  namespace: placement4
+  labels:
+    app: placement4
+spec:
+  clusterReplicas: 1
+  clusterSelector:
+    matchLabels:
+      name: local-cluster
+---
+apiVersion: apps.open-cluster-management.io/v1
+kind: PlacementRule
+metadata:
+  name: placement5
+  namespace: placement5
+  labels:
+    app: placement5
+spec:
+  clusterReplicas: 1
+  clusterSelector:
+    matchLabels:
+      name: local-cluster
+---
+apiVersion: apps.open-cluster-management.io/v1
+kind: PlacementRule
+metadata:
+  name: placement6
+  namespace: placement6
+  labels:
+    app: placement6
+spec:
+  clusterReplicas: 1
+  clusterSelector:
+    matchLabels:
+      name: local-cluster
+
