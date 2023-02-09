@@ -14,7 +14,7 @@ spec:
 apiVersion: apps.open-cluster-management.io/v1
 kind: PlacementRule
 metadata:
-  name: placement2
+  name: placement1
   namespace: placement2
   labels:
     app: placement2
@@ -27,7 +27,7 @@ spec:
 apiVersion: apps.open-cluster-management.io/v1
 kind: PlacementRule
 metadata:
-  name: placement3
+  name: placement1
   namespace: placement3
   labels:
     app: placement3
@@ -40,7 +40,7 @@ spec:
 apiVersion: apps.open-cluster-management.io/v1
 kind: PlacementRule
 metadata:
-  name: placement4
+  name: placement1
   namespace: placement4
   labels:
     app: placement4
@@ -53,7 +53,7 @@ spec:
 apiVersion: apps.open-cluster-management.io/v1
 kind: PlacementRule
 metadata:
-  name: placement5
+  name: placement1
   namespace: placement5
   labels:
     app: placement5
@@ -66,7 +66,7 @@ spec:
 apiVersion: apps.open-cluster-management.io/v1
 kind: PlacementRule
 metadata:
-  name: placement6
+  name: placement1
   namespace: placement6
   labels:
     app: placement6
