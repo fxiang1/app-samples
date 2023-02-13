@@ -75,4 +75,28 @@ spec:
   clusterSelector:
     matchLabels:
       name: local-cluster
+---
+apiVersion: apps.open-cluster-management.io/v1
+kind: PlacementRule
+metadata:
+  name: placement2
+  labels:
+    app: placement6
+spec:
+  clusterReplicas: 1
+  clusterSelector:
+    matchLabels:
+      name: local-cluster
+---
+apiVersion: apps.open-cluster-management.io/v1
+kind: PlacementRule
+metadata:
+  name: placement3
+  labels:
+    app: placement6
+spec:
+  clusterReplicas: 1
+  clusterSelector:
+    matchLabels:
+      name: local-cluster
 
