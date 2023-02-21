@@ -10,14 +10,14 @@ spec:
   identityProviders:
     - htpasswd:
         fileData:
-          name: app-e2e-users-test
+          name: app-e2e-users
       mappingMethod: claim
-      name: app-e2e-htpasswd-test
+      name: app-e2e-htpasswd
       type: HTPasswd
     - htpasswd:
         fileData:
-          name: htpasswd-d4pwb-test
+          name: htpasswd-d4pwb
       mappingMethod: claim
-      name: feng-htpasswd-test
+      name: feng-htpasswd
       type: HTPasswd
 
