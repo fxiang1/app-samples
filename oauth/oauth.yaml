@@ -16,7 +16,7 @@ spec:
       type: HTPasswd
     - htpasswd:
         fileData:
-          name: htpasswd-d4pwb
+          name: htpasswd-wmp6v
       mappingMethod: claim
       name: feng-htpasswd
       type: HTPasswd
