@@ -5,31 +5,31 @@ metadata:
   namespace: feng-mc
 spec:
   desiredCuration: upgrade
-   destroy:
-     jobMonitorTimeout: 5
-   install:
-     jobMonitorTimeout: 5
-     posthook:
-       - extra_vars: {}
-         name: Demo Job Template 2
-         type: Job
-     prehook:
-       - extra_vars: {}
-         name: Demo Job Template
-         type: Job
-     towerAuthSecret: toweraccess
-   inventory: Demo Inventory
-   scale:
-     jobMonitorTimeout: 5
-   upgrade:
-     monitorTimeout: 120
-     posthook:
-       - extra_vars: {}
-         name: Demo Job Template 2
-         type: Job
-     prehook:
-       - extra_vars: {}
-         name: Demo Job Template
-         type: Job
-     towerAuthSecret: toweraccess
+  destroy:
+    jobMonitorTimeout: 5
+  install:
+    jobMonitorTimeout: 5
+    posthook:
+      - extra_vars: {}
+        name: Demo Job Template 2
+        type: Job
+    prehook:
+      - extra_vars: {}
+        name: Demo Job Template
+        type: Job
+    towerAuthSecret: toweraccess
+  inventory: Demo Inventory
+  scale:
+    jobMonitorTimeout: 5
+  upgrade:
+    monitorTimeout: 120
+    posthook:
+      - extra_vars: {}
+        name: Demo Job Template 2
+        type: Job
+    prehook:
+      - extra_vars: {}
+        name: Demo Job Template
+        type: Job
+    towerAuthSecret: toweraccess
 
