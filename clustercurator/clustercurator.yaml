@@ -6,25 +6,31 @@ metadata:
   resourceVersion: ""
 spec:
   desiredCuration: upgrade
-  install:
-    towerAuthSecret: toweraccess
-    prehook:
-      - name: Demo Job Template
-        extra_vars: {}
-        type: Job
-    posthook:
-      - name: Demo Job Template 2
-        extra_vars: {}
-        type: Job
-  upgrade:
-    towerAuthSecret: toweraccess
-    prehook:
-      - name: Demo Job Template
-        extra_vars: {}
-        type: Job
-    posthook:
-      - name: Demo Job Template 2
-        extra_vars: {}
-        type: Job
-  inventory: Demo Inventory
+   destroy:
+     jobMonitorTimeout: 5
+   install:
+     jobMonitorTimeout: 5
+     posthook:
+       - extra_vars: {}
+         name: Demo Job Template 2
+         type: Job
+     prehook:
+       - extra_vars: {}
+         name: Demo Job Template
+         type: Job
+     towerAuthSecret: toweraccess
+   inventory: Demo Inventory
+   scale:
+     jobMonitorTimeout: 5
+   upgrade:
+     monitorTimeout: 120
+     posthook:
+       - extra_vars: {}
+         name: Demo Job Template 2
+         type: Job
+     prehook:
+       - extra_vars: {}
+         name: Demo Job Template
+         type: Job
+     towerAuthSecret: toweraccess
 
