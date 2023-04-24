@@ -1,0 +1,161 @@
+kind: ClusterRole
+apiVersion: rbac.authorization.k8s.io/v1
+metadata:
+  name: feng-clusterrole
+rules:
+  - verbs:
+      - create
+      - delete
+      - get
+      - list
+      - patch
+      - update
+      - watch
+    apiGroups:
+      - ''
+      - rbac.authorization.k8s.io
+    resources:
+      - secrets
+      - pods
+      - serviceaccounts
+      - roles
+      - rolebindings
+      - services
+      - services/finalizers
+      - endpoints
+      - persistentvolumeclaims
+      - events
+      - configmaps
+      - jobs
+      - pods/exec
+      - pods/log
+  - verbs:
+      - create
+      - delete
+      - get
+      - list
+      - patch
+      - update
+      - watch
+    apiGroups:
+      - apps
+    resources:
+      - deployments
+      - daemonsets
+      - replicasets
+      - statefulsets
+      - jobs
+  - verbs:
+      - get
+      - create
+    apiGroups:
+      - monitoring.coreos.com
+    resources:
+      - servicemonitors
+  - verbs:
+      - create
+      - delete
+      - get
+      - list
+      - patch
+      - update
+      - watch
+    apiGroups:
+      - tower.ansible.com
+    resources:
+      - ansiblejobs
+      - ansiblejobs/status
+      - ansiblejobs/finalizers
+  - verbs:
+      - create
+      - delete
+      - get
+      - list
+      - patch
+      - update
+      - watch
+    apiGroups:
+      - tower.ansible.com
+    resources:
+      - jobtemplates
+      - jobtemplates/status
+      - jobtemplates/finalizers
+  - verbs:
+      - update
+    apiGroups:
+      - apps
+    resources:
+      - deployments/finalizers
+    resourceNames:
+      - resource-operator-controller-manager
+  - verbs:
+      - get
+    apiGroups:
+      - ''
+    resources:
+      - pods
+      - jobs
+  - verbs:
+      - get
+    apiGroups:
+      - apps
+    resources:
+      - replicasets
+      - deployments
+      - jobs
+  - verbs:
+      - create
+      - delete
+      - get
+      - list
+      - patch
+      - update
+      - watch
+    apiGroups:
+      - tower.ansible.com
+    resources:
+      - '*'
+  - verbs:
+      - create
+      - delete
+      - get
+      - list
+      - patch
+      - update
+      - watch
+    apiGroups:
+      - batch
+    resources:
+      - '*'
+  - verbs:
+      - get
+      - list
+      - watch
+      - create
+      - update
+      - patch
+      - delete
+    apiGroups:
+      - ''
+    resources:
+      - configmaps
+  - verbs:
+      - get
+      - list
+      - watch
+      - create
+      - update
+      - patch
+      - delete
+    apiGroups:
+      - coordination.k8s.io
+    resources:
+      - leases
+  - verbs:
+      - create
+      - patch
+    apiGroups:
+      - ''
+    resources:
+      - events
+

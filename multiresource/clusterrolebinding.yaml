@@ -1,0 +1,13 @@
+kind: ClusterRoleBinding
+apiVersion: rbac.authorization.k8s.io/v1
+metadata:
+  name: feng-clusterrolebinding
+subjects:
+  - kind: ServiceAccount
+    name: default
+    namespace: openshift-cluster-version
+roleRef:
+  apiGroup: rbac.authorization.k8s.io
+  kind: ClusterRole
+  name: feng-clusterrole
+
