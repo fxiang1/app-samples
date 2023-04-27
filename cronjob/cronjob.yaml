@@ -3,7 +3,7 @@ kind: CronJob
 metadata:
   name: hello
 spec:
-  schedule: "* * * * *"
+  schedule: "0 0 * * *"
   jobTemplate:
     spec:
       template:
@@ -23,7 +23,7 @@ kind: CronJob
 metadata:
   name: hello1
 spec:
-  schedule: "* * * * *"
+  schedule: "0 0 * * *"
   jobTemplate:
     spec:
       template:
@@ -43,7 +43,7 @@ kind: CronJob
 metadata:
   name: hello2
 spec:
-  schedule: "* * * * *"
+  schedule: "0 0 * * *"
   jobTemplate:
     spec:
       template:
@@ -63,7 +63,7 @@ kind: CronJob
 metadata:
   name: hello3
 spec:
-  schedule: "* * * * *"
+  schedule: "0 0 * * *"
   jobTemplate:
     spec:
       template:
@@ -83,7 +83,7 @@ kind: CronJob
 metadata:
   name: hello4
 spec:
-  schedule: "* * * * *"
+  schedule: "0 0 * * *"
   jobTemplate:
     spec:
       template:
@@ -103,7 +103,7 @@ kind: CronJob
 metadata:
   name: hello5
 spec:
-  schedule: "* * * * *"
+  schedule: "0 0 * * *"
   jobTemplate:
     spec:
       template:
@@ -123,7 +123,7 @@ kind: CronJob
 metadata:
   name: hello6
 spec:
-  schedule: "* * * * *"
+  schedule: "0 0 * * *"
   jobTemplate:
     spec:
       template:
@@ -143,7 +143,7 @@ kind: CronJob
 metadata:
   name: hello7
 spec:
-  schedule: "* * * * *"
+  schedule: "0 0 * * *"
   jobTemplate:
     spec:
       template:
@@ -163,7 +163,7 @@ kind: CronJob
 metadata:
   name: hello8
 spec:
-  schedule: "* * * * *"
+  schedule: "0 0 * * *"
   jobTemplate:
     spec:
       template:
