@@ -7,7 +7,7 @@ metadata:
     app: mortgagepod
   annotations:
     apps.open-cluster-management.io/github-path: mortgagepod
-    apps.open-cluster-management.io/github-branch: master
+    apps.open-cluster-management.io/github-branch: main
 spec:
   channel: mortgagepod-ch/mortgagepod-channel
   placement:
