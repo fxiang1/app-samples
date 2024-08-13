@@ -17,8 +17,6 @@ spec:
   instancetype:
     kind: VirtualMachineClusterInstancetype
     name: u1.nano
-  preference:
-    name: fedora
   running: false
   template:
     spec:
