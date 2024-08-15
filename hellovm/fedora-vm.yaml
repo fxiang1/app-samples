@@ -17,7 +17,7 @@ spec:
   instancetype:
     kind: VirtualMachineClusterInstancetype
     name: u1.nano
-  running: false
+  running: true
   template:
     spec:
       domain:
