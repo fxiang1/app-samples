@@ -1,0 +1,37 @@
+apiVersion: kubevirt.io/v1
+kind: VirtualMachine
+metadata:
+  name: fedora-plum-walrus-988
+spec:
+  dataVolumeTemplates:
+    - metadata:
+        name: fedora-plum-walrus-988-volume
+      spec:
+        sourceRef:
+          kind: DataSource
+          name: fedora
+          namespace: openshift-virtualization-os-images
+        storage:
+          resources:
+            requests: {}
+  instancetype:
+    kind: VirtualMachineClusterInstancetype
+    name: u1.nano
+  running: true
+  template:
+    spec:
+      domain:
+        devices: {}
+      volumes:
+        - dataVolume:
+            name: fedora-plum-walrus-988-volume
+          name: rootdisk
+        - cloudInitNoCloud:
+            userData: |
+              #cloud-config
+              chpasswd:
+                expire: false
+              password: fvgd-3v94-nlbh
+              user: fedora
+          name: cloudinitdisk
+
