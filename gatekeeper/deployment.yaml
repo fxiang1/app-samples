@@ -1,0 +1,32 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    name: book-import
+  name: book-import
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      name: book-import
+  template:
+    metadata:
+      labels:
+        name: book-import
+    spec:
+      automountServiceAccountToken: false
+      containers:
+      - image: quay.io/jpacker/hugo-nginx:latest
+        name: book-import
+        ports:
+        - containerPort: 8080
+          name: http-server
+        resources:
+          requests:
+            cpu: "200m"
+            memory: "1Gi"
+          limits:
+            cpu: "400m"
+            memory: "2Gi"
+            ephemeral-storage: "100Mi"
+
