@@ -4,7 +4,12 @@ metadata:
   name: feng-helloworld-applicationset
 spec:
   generators:
-  - clusters: {} # This is a generator, specifically, a cluster generator.
+    - clusterDecisionResource:
+      configMapRef: acm-placement 
+      labelSelector:
+        matchLabels:
+          cluster.open-cluster-management.io/placement: feng-helloworld-placement
+      requeueAfterSeconds: 180
   template: 
     # This is a template Argo CD Application, but with support for parameter substitution.
     metadata:
@@ -29,4 +34,20 @@ spec:
           prune: true
           allowEmpty: true
           selfHeal: true
+---
+apiVersion: cluster.open-cluster-management.io/v1beta1
+kind: Placement
+name: feng-helloworld-placement
+spec:
+  clusterSets:
+    - default
+  numberOfClusters: 1
+  predicates:
+    - requiredClusterSelector:
+        labelSelector:
+          matchExpressions:
+            - key: name
+              operator: In
+              values:
+                - local-cluster
 
