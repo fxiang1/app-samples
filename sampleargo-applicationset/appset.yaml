@@ -37,7 +37,8 @@ spec:
 ---
 apiVersion: cluster.open-cluster-management.io/v1beta1
 kind: Placement
-name: feng-helloworld-placement
+metadata:
+  name: feng-helloworld-placement
 spec:
   clusterSets:
     - default
