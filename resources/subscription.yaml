@@ -1,0 +1,11 @@
+apiVersion: operators.coreos.com/v1alpha1
+kind: Subscription
+metadata:
+  name: test-sub
+spec:
+  channel: test-channel
+  installPlanApproval: Automatic
+  name: acm
+  source: test-registry
+  sourceNamespace: test-marketplace
+
