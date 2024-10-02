@@ -37,7 +37,7 @@ patches:
         monitoring_config_enabled: enabled
         region: nam
         sector: cti
-        vault-csi-provider-enabled: true
+        vault-csi-provider-enabled: 'true'
 
 - target:
     kind: Namespace
