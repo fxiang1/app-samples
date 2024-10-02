@@ -1,0 +1,50 @@
+resources:
+- ../base
+
+patches:
+- target:
+    kind: KlusterletAddonConfig
+  patch: |
+    - op: replace
+      path: /metadata/name
+      value: "namctigtd27d"
+    - op: replace
+      path: /metadata/namespace
+      value: "namctigtd27d"
+    - op: replace
+      path: /spec/clusterName
+      value: "namctigtd27d"
+    - op: replace
+      path: /spec/clusterNamespace
+      value: "namctigtd27d"
+- target:
+    kind: ManagedCluster
+  patch: |
+    - op: replace
+      path: /metadata/name
+      value: "namctigtd27d"
+    - op: replace
+      path: /metadata/namespace
+      value: "namctigtd27d"
+    - op: add
+      path: /metadata/labels
+      value: 
+        datacenter: gtdc
+        environment: dev
+        monitoring_config_enabled: enabled
+        region: nam
+        sector: cti
+        vault-csi-provider-enabled: "true"
+        test2: test2
+        test3: test3
+    - op: add
+      path: /metadata/annotations
+      value: 
+        test2: test2
+
+- target:
+    kind: Namespace
+  patch: |
+    - op: replace
+      path: /metadata/name
+      value: "namctigtd27d"

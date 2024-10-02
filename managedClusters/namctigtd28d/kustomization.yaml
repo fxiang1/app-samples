@@ -1,0 +1,47 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+
+bases:
+- ../../base
+
+patches:
+- target:
+    kind: KlusterletAddonConfig
+  patch: |
+    - op: replace
+      path: /metadata/name
+      value: "namctigtd28d"
+    - op: replace
+      path: /metadata/namespace
+      value: "namctigtd28d"
+    - op: replace
+      path: /spec/clusterName
+      value: "namctigtd28d"
+    - op: replace
+      path: /spec/clusterNamespace
+      value: "namctigtd28d"
+- target:
+    kind: ManagedCluster
+  patch: |
+    - op: replace
+      path: /metadata/name
+      value: "namctigtd28d"
+    - op: replace
+      path: /metadata/namespace
+      value: "namctigtd28d"
+    - op: add
+      path: /metadata/labels
+      value: 
+        datacenter: gtdc
+        environment: dev
+        monitoring_config_enabled: enabled
+        region: nam
+        sector: cti
+        vault-csi-provider-enabled: true
+
+- target:
+    kind: Namespace
+  patch: |
+    - op: replace
+      path: /metadata/name
+      value: "namctigtd28d"
