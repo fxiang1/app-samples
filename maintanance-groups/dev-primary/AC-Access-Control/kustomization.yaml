@@ -1,0 +1,55 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+
+resources:
+- ../../../base/common
+
+configMapGenerator:
+  - name: ac-access-control
+    literals:
+      - application_name=ac-access-control
+      - git-path=cluster-configurations/east/dev/AC-Access-Control
+      - application_type=policy
+
+generatorOptions:
+  disableNameSuffixHash: true
+
+replacements:
+- source:
+    kind: ConfigMap
+    fieldPath: data.application_name
+  targets:
+  - select:
+      kind: Subscription
+    fieldPaths:
+      - metadata.labels.app
+      - metadata.name
+  - select:
+      kind: Application
+    fieldPaths:
+      - metadata.name
+      - metadata.labels.app
+  - select:
+      kind: Application
+    fieldPaths:
+      - spec.selector.matchExpressions.0.values.0         
+- source:
+    kind: ConfigMap
+    fieldPath: data.git-path
+  targets:
+  - select:
+      kind: Subscription
+    fieldPaths:
+      - metadata.annotations.[apps.open-cluster-management.io/git-path]   
+- source:
+    kind: ConfigMap
+    fieldPath: data.application_type
+  targets:
+  - select:
+      kind: Subscription
+    fieldPaths:
+      - metadata.labels.subscription-type
+    options:
+      create: true
+
+

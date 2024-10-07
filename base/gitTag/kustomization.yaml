@@ -1,0 +1,18 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+
+configMapGenerator:
+  - name: git-config-map
+    namespace: maintanance-group
+    literals:
+      - dev-primary-tag=V6.08
+      - dev-secondary-tag=V6.7
+      - lab-primary-tag=V1.0
+      - lab-secondary-tag=V2.0
+      - prod-one-tag=V1.0
+      - prod-two-tag=V1.0
+      - prod-three-tag=V1.0
+      - prod-four-tag=V1.0
+      - git_branch=acm-policies      
+generatorOptions:
+  disableNameSuffixHash: true      

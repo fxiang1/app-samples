@@ -1,0 +1,73 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+
+resources:
+- ../../base/common
+
+namespace: dev-secondary
+
+labels:
+  - pairs:
+      app: dev-secondary
+
+configMapGenerator:
+  - name: dev-secondary-app-of-app
+    literals:
+      - application_name=dev-secondary
+      - git-path=maintanance-groups/dev-secondary
+      - placement_reference=hub-cluster
+      - git_branch=acm-policies
+##There is a duplication of the branch name?            
+
+generatorOptions:
+  disableNameSuffixHash: true
+
+replacements:
+- source:
+    kind: ConfigMap
+    name: dev-secondary-app-of-app
+    fieldPath: data.application_name
+  targets:
+  - select:
+      kind: Subscription
+    fieldPaths:
+      - metadata.name
+      - metadata.labels.app
+  - select:
+      kind: Application
+    fieldPaths:
+      - metadata.name
+      - metadata.labels.app
+  - select:
+      kind: Application
+    fieldPaths:
+      - spec.selector.matchExpressions.0.values.0         
+- source:
+    kind: ConfigMap
+    name: dev-secondary-app-of-app
+    fieldPath: data.git-path
+  targets:
+  - select:
+      kind: Subscription
+    fieldPaths:
+      - metadata.annotations.[apps.open-cluster-management.io/git-path]   
+- source:
+    kind: ConfigMap
+    name: dev-secondary-app-of-app
+    fieldPath: data.git_branch
+  targets:
+  - select:
+      kind: Subscription
+    fieldPaths:
+      - metadata.annotations.[apps.open-cluster-management.io/git-branch]
+    options:
+      create: true       
+- source:
+    kind: ConfigMap
+    name: dev-secondary-app-of-app
+    fieldPath: data.placement_reference
+  targets:
+  - select:
+      kind: Subscription
+    fieldPaths:
+      - spec.placement.placementRef.name

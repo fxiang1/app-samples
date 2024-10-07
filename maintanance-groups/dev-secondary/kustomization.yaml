@@ -1,0 +1,97 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+
+resources:
+  - ./mysql
+  - ./AC-Access-Control
+  - ../common
+  - ../../base/gitTag
+
+configMapGenerator:
+  - name: dev-secondary
+    literals:
+      - environment=dev
+      - fault_domain=secondary
+      - placement_name=dev-secondary         
+      - policy_subscription_placement_name=hub-cluster
+generatorOptions:
+  disableNameSuffixHash: true
+
+namespace: dev-secondary
+
+replacements:
+- source:
+    kind: ConfigMap
+    name:  dev-secondary
+    fieldPath: data.placement_name
+  targets:
+  - select:
+      kind: PlacementRule
+      name: maintanance-group-placement
+    fieldPaths:
+      - metadata.name
+- source:
+    kind: ConfigMap
+    name:  dev-secondary
+    fieldPath: data.environment
+  targets:
+  - select:
+      kind: PlacementRule
+      name: maintanance-group-placement
+    fieldPaths:
+      - spec.clusterSelector.matchLabels.env
+    options:
+      create: true
+  - select:
+      kind: PlacementRule
+      name: policy-placement
+    fieldPaths:
+      - spec.clusterSelector.matchExpressions.0.values.0      
+- source:
+    kind: ConfigMap
+    name:  dev-secondary
+    fieldPath: data.fault_domain
+  targets:
+  - select:
+      kind: PlacementRule
+      name: maintanance-group-placement
+    fieldPaths:
+      - spec.clusterSelector.matchLabels.fault-domain 
+    options:
+      create: true
+  - select:
+      kind: PlacementRule
+      name: policy-placement
+    fieldPaths:
+      - spec.clusterSelector.matchExpressions.1.values.0      
+- source:
+    kind: ConfigMap
+    name: git-config-map
+    fieldPath: data.dev-secondary-tag
+  targets:
+  - select:
+      kind: Subscription
+    fieldPaths:
+      - metadata.annotations.[apps.open-cluster-management.io/git-tag]       
+    options:
+      create: true     
+- source:
+    kind: ConfigMap
+    name:  dev-secondary
+    fieldPath: data.placement_name
+  targets:
+  - select:
+      kind: Subscription
+      labelSelector: subscription-type=application
+    fieldPaths:
+      - spec.placement.placementRef.name      
+- source:
+    kind: ConfigMap
+    name:  dev-secondary
+    fieldPath: data.policy_subscription_placement_name
+  targets:
+  - select:
+      kind: Subscription
+      labelSelector: subscription-type=policy
+    fieldPaths:
+      - spec.placement.placementRef.name         

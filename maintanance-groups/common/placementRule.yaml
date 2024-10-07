@@ -1,0 +1,9 @@
+apiVersion: apps.open-cluster-management.io/v1
+kind: PlacementRule
+metadata:
+  name: maintanance-group-placement
+spec:
+  clusterSelector:
+    matchLabels:
+      env: environment
+      fault-domain: fault_domain

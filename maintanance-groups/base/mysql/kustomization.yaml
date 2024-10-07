@@ -1,0 +1,8 @@
+kind: Kustomization
+
+
+resources:
+- application.yaml
+
+commonLabels:
+  app: mysql

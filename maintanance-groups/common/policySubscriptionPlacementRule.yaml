@@ -1,0 +1,8 @@
+apiVersion: apps.open-cluster-management.io/v1
+kind: PlacementRule
+metadata:
+  name: hub-cluster
+spec:
+  clusterSelector:
+    matchLabels:
+      local-cluster: 'true'

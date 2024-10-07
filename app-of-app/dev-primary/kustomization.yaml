@@ -1,0 +1,70 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+
+resources:
+- ../../base/common
+
+namespace: dev-primary
+
+labels:
+  - pairs:
+      app: dev-primary
+
+configMapGenerator:
+  - name: dev-primary-app-of-app
+    literals:
+      - application_name=dev-primary
+      - git_path=maintanance-groups/dev-primary
+      - cluster_name=local-cluster
+      - argo_namespace=openshift-gitops
+      - git_repo="https://github.com/fxiang1/app-samples"
+
+generatorOptions:
+  disableNameSuffixHash: true
+
+replacements:
+- source:
+    kind: ConfigMap
+    name: dev-primary-app-of-app
+    fieldPath: data.application_name
+  targets:
+  - select:
+      kind: Application
+    fieldPaths:
+      - metadata.name
+- source:
+    kind: ConfigMap
+    name: dev-primary-app-of-app
+    fieldPath: data.argo_namespace
+  targets:
+  - select:
+      kind: Application
+    fieldPaths:
+      - metadata.namespace
+- source:
+    kind: ConfigMap
+    name: dev-primary-app-of-app
+    fieldPath: data.git_repo
+  targets:
+  - select:
+      kind: Application
+    fieldPaths:
+      - spec.source.repoURL
+- source:
+    kind: ConfigMap
+    name: dev-primary-app-of-app
+    fieldPath: data.git_path
+  targets:
+  - select:
+      kind: Application
+    fieldPaths:
+      - spec.source.path
+- source:
+    kind: ConfigMap
+    name: dev-primary-app-of-app
+    fieldPath: data.cluster_name
+  targets:
+  - select:
+      kind: Application
+    fieldPaths:
+      - spec.destination.name

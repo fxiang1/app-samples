@@ -1,0 +1,94 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+
+resources:
+  - ./mysql
+  - ./hello-world
+  - ./AC-Access-Control
+  - ../common
+  - ../../base/gitTag
+
+configMapGenerator:
+  - name: dev-primary
+    literals:
+      - environment=dev
+      - fault_domain=primary
+      - app_subscription_placement_name=dev-primary
+      - policy_subscription_placement_name=hub-cluster
+generatorOptions:
+  disableNameSuffixHash: true
+
+namespace: dev-primary
+
+replacements:
+- source:
+    kind: ConfigMap
+    name:  dev-primary
+    fieldPath: data.app_subscription_placement_name
+  targets:
+  - select:
+      kind: PlacementRule
+      name: maintanance-group-placement
+    fieldPaths:
+      - metadata.name
+- source:
+    kind: ConfigMap
+    name:  dev-primary
+    fieldPath: data.environment
+  targets:
+  - select:
+      kind: PlacementRule
+      name: maintanance-group-placement
+    fieldPaths:
+      - spec.clusterSelector.matchLabels.env
+  - select:
+      kind: PlacementRule
+      name: policy-placement
+    fieldPaths:
+      - spec.clusterSelector.matchExpressions.0.values.0      
+- source:
+    kind: ConfigMap
+    name:  dev-primary
+    fieldPath: data.fault_domain
+  targets:
+  - select:
+      kind: PlacementRule
+      name: maintanance-group-placement
+    fieldPaths:
+      - spec.clusterSelector.matchLabels.fault-domain 
+  - select:
+      kind: PlacementRule
+      name: policy-placement
+    fieldPaths:
+      - spec.clusterSelector.matchExpressions.1.values.0      
+- source:
+    kind: ConfigMap
+    name: git-config-map
+    fieldPath: data.dev-primary-tag
+  targets:
+  - select:
+      kind: Subscription
+    fieldPaths:
+      - metadata.annotations.[apps.open-cluster-management.io/git-tag]
+    options:
+      create: true     
+- source:
+    kind: ConfigMap
+    name:  dev-primary
+    fieldPath: data.app_subscription_placement_name
+  targets:
+  - select:
+      kind: Subscription
+      labelSelector: subscription-type=application
+    fieldPaths:
+      - spec.placement.placementRef.name      
+- source:
+    kind: ConfigMap
+    name:  dev-primary
+    fieldPath: data.policy_subscription_placement_name
+  targets:
+  - select:
+      kind: Subscription
+      labelSelector: subscription-type=policy
+    fieldPaths:
+      - spec.placement.placementRef.name         

@@ -3,14 +3,19 @@ kind: Application
 metadata:
   name: mainapp
   namespace: openshift-gitops
-  finalizers:
-  - resources-finalizer.argocd.argoproj.io
 spec:
   destination:
-    namespace: feng
-    name: in-cluster
+    namespace: a-o-a
+    name: local-cluster
   project: default
   source:
-    path: childargoapps
+    path: helloworld
     repoURL: https://github.com/fxiang1/app-samples
     targetRevision: HEAD
+syncPolicy:
+  automated:
+  prune: true
+  selfHeal: true
+  syncOptions:
+  - CreateNamespace=true
+
