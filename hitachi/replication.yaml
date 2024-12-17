@@ -1,0 +1,8 @@
+apiVersion: hspc.hitachi.com/v1
+kind: Replication
+metadata:
+  name: mongodb-replication
+spec:
+  persistentVolumeClaimName: mongo-data-mongodb-0
+  storageClassName: sc-hrpc
+
