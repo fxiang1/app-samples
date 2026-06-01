@@ -1,0 +1,32 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: dep-1-2
+  labels:
+    app: dep-1-2
+    leak-mc-test: "true"
+    app-group: app-1
+  annotations:
+    leak-test/churn-counter: "0"
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: dep-1-2
+  template:
+    metadata:
+      labels:
+        app: dep-1-2
+        leak-mc-test: "true"
+    spec:
+      containers:
+        - name: worker
+          image: registry.access.redhat.com/ubi9/ubi-minimal:latest
+          command: ["/bin/sh", "-c", "yes | head -c 100m > /dev/null; sleep infinity"]
+          resources:
+            requests:
+              memory: "8Mi"
+              cpu: "1m"
+            limits:
+              memory: "16Mi"
+              cpu: "10m"

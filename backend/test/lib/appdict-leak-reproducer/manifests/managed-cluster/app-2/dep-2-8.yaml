@@ -1,0 +1,38 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: dep-2-8
+  labels:
+    app: dep-2-8
+    leak-mc-test: "true"
+    app-group: app-2
+  annotations:
+    leak-test/churn-counter: "0"
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: dep-2-8
+  template:
+    metadata:
+      labels:
+        app: dep-2-8
+        leak-mc-test: "true"
+    spec:
+      containers:
+        - name: worker
+          image: registry.access.redhat.com/ubi9/ubi-minimal:latest
+          command: ["/bin/sh", "-c", "while true; do sleep $((RANDOM % 30 + 10)); touch /tmp/live; sleep 5; rm -f /tmp/live; done"]
+          resources:
+            requests:
+              memory: "8Mi"
+              cpu: "1m"
+            limits:
+              memory: "32Mi"
+              cpu: "10m"
+          livenessProbe:
+            exec:
+              command: ["test", "-f", "/tmp/live"]
+            initialDelaySeconds: 5
+            periodSeconds: 5
+            failureThreshold: 1
