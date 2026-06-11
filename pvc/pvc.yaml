@@ -1,14 +1,100 @@
-apiVersion: v1
 kind: PersistentVolumeClaim
+apiVersion: v1
 metadata:
-  name: stuck-pvc
-  finalizers:
-    # Kubernetes will wait for a controller to remove this, but none exists!
-    - intentional.blocker/never-removes 
+  name: test-pvc-100m
+  labels:
+    app: test-pvc-pod
 spec:
   accessModes:
     - ReadWriteOnce
   resources:
     requests:
-      storage: 1Gi
-
+      storage: 100Mi
+  volumeName: pvc-dfd7fca2-762e-471c-923b-00b294dbcc5a
+  storageClassName: gp3-csi
+  volumeMode: Filesystem
+---
+kind: Pod
+apiVersion: v1
+metadata:
+  name: test-pvc-pod
+  labels:
+    app: test-pvc-pod
+spec:
+  restartPolicy: Always
+  serviceAccountName: default
+  imagePullSecrets:
+    - name: default-dockercfg-qz4wh
+  priority: 0
+  schedulerName: default-scheduler
+  enableServiceLinks: true
+  terminationGracePeriodSeconds: 30
+  preemptionPolicy: PreemptLowerPriority
+  nodeName: ip-10-0-5-53.ec2.internal
+  securityContext:
+    runAsUser: 1000
+    runAsNonRoot: true
+    fsGroup: 1000
+  containers:
+    - resources: {}
+      terminationMessagePath: /dev/termination-log
+      name: test
+      command:
+        - sleep
+        - '3600'
+      securityContext:
+        capabilities:
+          drop:
+            - ALL
+        runAsUser: 1000
+        runAsNonRoot: true
+        allowPrivilegeEscalation: false
+        seccompProfile:
+          type: RuntimeDefault
+      imagePullPolicy: Always
+      volumeMounts:
+        - name: test-vol
+          mountPath: /data
+        - name: kube-api-access-85qh2
+          readOnly: true
+          mountPath: /var/run/secrets/kubernetes.io/serviceaccount
+      terminationMessagePolicy: File
+      image: busybox
+  serviceAccount: default
+  volumes:
+    - name: test-vol
+      persistentVolumeClaim:
+        claimName: test-pvc-100m
+    - name: kube-api-access-85qh2
+      projected:
+        sources:
+          - serviceAccountToken:
+              expirationSeconds: 3607
+              path: token
+          - configMap:
+              name: kube-root-ca.crt
+              items:
+                - key: ca.crt
+                  path: ca.crt
+          - downwardAPI:
+              items:
+                - path: namespace
+                  fieldRef:
+                    apiVersion: v1
+                    fieldPath: metadata.namespace
+          - configMap:
+              name: openshift-service-ca.crt
+              items:
+                - key: service-ca.crt
+                  path: service-ca.crt
+        defaultMode: 420
+  dnsPolicy: ClusterFirst
+  tolerations:
+    - key: node.kubernetes.io/not-ready
+      operator: Exists
+      effect: NoExecute
+      tolerationSeconds: 300
+    - key: node.kubernetes.io/unreachable
+      operator: Exists
+      effect: NoExecute
+      tolerationSeconds: 300
