@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: stuck-pvc
+  finalizers:
+    # Kubernetes will wait for a controller to remove this, but none exists!
+    - intentional.blocker/never-removes 
+spec:
+  accessModes:
+    - ReadWriteOnce
+  resources:
+    requests:
+      storage: 1Gi
+
